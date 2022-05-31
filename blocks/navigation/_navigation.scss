@@ -1,0 +1,25 @@
+.navigation {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 28px 120px 28px 0;
+
+  &__list {
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+    display: flex;
+  }
+
+  &__item {
+    padding-right: 34px;
+  }
+
+  &__link {
+    text-decoration: none;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    color: #151515;
+  }
+}
