@@ -1,0 +1,32 @@
+.lead-info {
+  width: 460px;
+  padding-top: 80px;
+  padding-left: 120px;
+
+  &__title {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 55px;
+    line-height: 60px;
+  }
+
+  &__subtitle {
+    padding-top: 50px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  &__button {
+    padding-top: 50px;
+  }
+
+  &__name-bike {
+    padding-top: 167px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 18px;
+  }
+}

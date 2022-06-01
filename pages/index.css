@@ -373,7 +373,7 @@ template {
 }
 
 .header {
-  /*max-width: 1440px;*/
+  width: 100%;
   margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -407,6 +407,10 @@ template {
   padding-right: 34px;
 }
 
+.navigation__item:last-child {
+  padding-right: 0;
+}
+
 .navigation__link {
   text-decoration: none;
   font-style: normal;
@@ -414,5 +418,49 @@ template {
   font-size: 14px;
   line-height: 18px;
   color: #151515;
+}
+
+.lead {
+  height: 856px;
+  width: 100%;
+  background-image: url(.../../../images/road-Intro.jpg);
+  background-repeat: no-repeat;
+  background-size: 610px 836px;
+  background-position: right bottom;
+  position: relative;
+  z-index: 1;
+}
+
+.lead-info {
+  width: 460px;
+  padding-top: 80px;
+  padding-left: 120px;
+}
+
+.lead-info__title {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 55px;
+  line-height: 60px;
+}
+
+.lead-info__subtitle {
+  padding-top: 50px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+}
+
+.lead-info__button {
+  padding-top: 50px;
+}
+
+.lead-info__name-bike {
+  padding-top: 167px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 18px;
 }
 /*# sourceMappingURL=index.css.map */
