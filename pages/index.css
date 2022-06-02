@@ -366,10 +366,11 @@ template {
 }
 
 .page {
-  min-width: 1440px;
+  max-width: 1440px;
   margin: auto;
   background-color: #F4F4F4;
   font-family: Inter, sans-serif;
+  color: #151515;
 }
 
 .header {
@@ -438,6 +439,7 @@ template {
 }
 
 .lead-info__title {
+  margin: 0;
   font-style: normal;
   font-weight: 700;
   font-size: 55px;
@@ -445,22 +447,110 @@ template {
 }
 
 .lead-info__subtitle {
+  margin: 0;
   padding-top: 50px;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
   line-height: 28px;
+  color: #222222;
+  opacity: 0.7;
 }
 
 .lead-info__button {
-  padding-top: 50px;
+  margin-top: 50px;
+  padding: 0;
+  height: 50px;
+  width: 180px;
+  text-align: center;
+  background-color: #24B47E;
+  border-radius: 4px;
+  border: none;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 18px;
+  color: #FFF;
 }
 
-.lead-info__name-bike {
+.info {
   padding-top: 167px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.info__link {
+  text-decoration: none;
+  color: #151515;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
   line-height: 18px;
+}
+
+.info__pointer {
+  width: 132px;
+  height: 2px;
+  padding-left: 30px;
+  background: #D7D4D4;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+}
+
+.motivation {
+  width: 100%;
+  padding: 120px 120px 60px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.motivation__photo {
+  width: 650px;
+  height: 460px;
+  display: block;
+}
+
+.motivation-text {
+  width: 470px;
+  padding-left: 80px;
+}
+
+.motivation-text__quote {
+  margin: 0;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 34px;
+  line-height: 44px;
+}
+
+.motivation-text__quote p {
+  margin: 0;
+}
+
+.motivation-text__quote-author {
+  margin: 0;
+  padding-top: 262px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 32px;
+}
+
+.motivation-text__quote-author-subline {
+  margin: 0;
+  padding-top: 6px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+  color: #222222;
+  opacity: 0.7;
 }
 /*# sourceMappingURL=index.css.map */
