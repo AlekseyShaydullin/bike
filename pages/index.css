@@ -507,8 +507,6 @@ template {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
 }
 
 .motivation__photo {
@@ -518,8 +516,19 @@ template {
 }
 
 .motivation-text {
+  margin: 0;
   width: 470px;
   padding-left: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .motivation-text__quote {
@@ -534,16 +543,15 @@ template {
   margin: 0;
 }
 
-.motivation-text__quote-author {
+.signature__quote-author {
   margin: 0;
-  padding-top: 262px;
   font-style: normal;
   font-weight: 500;
   font-size: 20px;
   line-height: 32px;
 }
 
-.motivation-text__quote-author-subline {
+.signature__quote-author-subline {
   margin: 0;
   padding-top: 6px;
   font-style: normal;
@@ -552,5 +560,60 @@ template {
   line-height: 28px;
   color: #222222;
   opacity: 0.7;
+}
+
+.variety {
+  padding-top: 60px;
+  padding-left: 120px;
+  overflow: hidden;
+  position: relative;
+}
+
+.variety__title {
+  margin: 0;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 55px;
+  line-height: 60px;
+}
+
+.variety__subtitle {
+  max-width: 460px;
+  margin: 0;
+  padding-top: 50px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  color: #222222;
+  opacity: 0.7;
+}
+
+.row-photo {
+  padding-top: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.row-photo__photo {
+  width: 650px;
+  height: 400px;
+}
+
+.row-photo__photo:first-child {
+  padding-right: 40px;
+  position: relative;
+  z-index: 1;
+}
+
+.row-photo__icon-rectangle {
+  background-image: url(.../../../images/icons/icon-smooth-road.svg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: absolute;
+  bottom: 16px;
+  z-index: 3;
 }
 /*# sourceMappingURL=index.css.map */

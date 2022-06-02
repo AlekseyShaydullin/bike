@@ -1,0 +1,25 @@
+.row-photo {
+  padding-top: 80px;
+  display: flex;
+
+  &__photo {
+    width: 650px;
+    height: 400px;
+  }
+
+  &__photo:first-child {
+    padding-right: 40px;
+    position: relative;
+    z-index: 1;
+  }
+
+  &__icon-rectangle {
+    background-image: url(.../../../images/icons/icon-smooth-road.svg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: absolute;
+    bottom: 16px;
+    z-index: 3;
+  }
+}
