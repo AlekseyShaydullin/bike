@@ -510,8 +510,9 @@ template {
 }
 
 .motivation__photo {
-  width: 650px;
-  height: 460px;
+  max-width: 650px;
+  width: 100%;
+  /*max-height: 460px;*/
   display: block;
 }
 
@@ -594,26 +595,72 @@ template {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-}
-
-.row-photo__photo {
-  width: 650px;
-  height: 400px;
-}
-
-.row-photo__photo:first-child {
-  padding-right: 40px;
   position: relative;
   z-index: 1;
 }
 
-.row-photo__icon-rectangle {
-  background-image: url(.../../../images/icons/icon-smooth-road.svg);
-  background-size: 100%;
+.row-photo__photo {
+  max-width: 650px;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: block;
+  /*height: 400px;*/
+}
+
+.row-photo__photo:first-child {
+  padding-right: 40px;
+}
+
+.row-photo__icon {
+  width: 100px;
+  height: 40px;
   background-repeat: no-repeat;
   background-position: center center;
   position: absolute;
   bottom: 16px;
   z-index: 3;
+}
+
+.row-photo__icon_sharp-turn {
+  background-image: url(.../../../images/icons/icon-sharp-turn.svg);
+}
+
+.row-photo__icon_off-road {
+  background-image: url(.../../../images/icons/icon-off-road.svg);
+}
+
+.row-photo__icon_rough-road {
+  background-image: url(.../../../images/icons/icon-smooth-road.svg);
+}
+
+.row-buttons {
+  margin: 50px auto 60px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.row-buttons__button {
+  width: 50px;
+  height: 50px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background-color: #EBEBEB;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.row-buttons__button:first-child {
+  margin-right: 20px;
+}
+
+.row-buttons__button_left {
+  background-image: url(.../../../images/icons/arrow-left.svg);
+}
+
+.row-buttons__button_right {
+  background-image: url(.../../../images/icons/arrow-right.svg);
 }
 /*# sourceMappingURL=index.css.map */
