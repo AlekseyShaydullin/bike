@@ -1,0 +1,40 @@
+.row-photo {
+  padding-top: 80px;
+  display: flex;
+  position: relative;
+  z-index: 1;
+
+  &__photo {
+    max-width: 650px;
+    width: 100%;
+    box-sizing: border-box;
+    display: block;
+    /*height: 400px;*/
+  }
+
+  &__photo:first-child {
+    padding-right: 40px;
+  }
+
+  &__icon {
+    width: 100px;
+    height: 40px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: absolute;
+    bottom: 16px;
+    z-index: 3;
+
+    &_sharp-turn {
+      background-image: url(.../../../images/icons/icon-sharp-turn.svg);
+    }
+
+    &_off-road {
+      background-image: url(.../../../images/icons/icon-off-road.svg);
+    }
+
+    &_rough-road {
+      background-image: url(.../../../images/icons/icon-smooth-road.svg);
+    }
+  }
+}
