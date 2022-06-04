@@ -1,0 +1,63 @@
+.footer-switcher {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+
+  &__sun {
+    width: 28px;
+    height: 28px;
+    border: none;
+    padding: 0;
+    background-image: url(.../../../images/icons/icon-sun.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-color: transparent;
+  }
+
+  &__light {
+    display: inline-block;
+    width: 44px;
+    height: 24px;
+    border-radius: 12px;
+    background: #FFF;
+    z-index: 0;
+    margin: 0;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    transition-duration: 300ms;
+
+    &::after {
+      content: "";
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: #24B47E;
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      z-index: 1;
+      transition-duration: 300ms;
+    }
+  }
+
+  &__dark {
+    background: #545454;
+
+    &::after {
+      left: 22px;
+    }
+  }
+
+  &__moon {
+    width: 20px;
+    height: 20px;
+    border: none;
+    padding: 0;
+    background-image: url(.../../../images/icons/icon-moon.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-color: transparent;
+  }
+}
