@@ -8,14 +8,7 @@
     padding-left: 0;
     list-style: none;
     display: flex;
-  }
-
-  &__item {
-    padding-right: 34px;
-
-    &:last-child {
-      padding-right: 0;
-    }
+    gap: 34px;
   }
 
   &__link {

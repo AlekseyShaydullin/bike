@@ -2,16 +2,9 @@
   margin: 0;
   padding-left: 0;
   display: flex;
+  gap: 40px;
   align-items: flex-end;
   list-style: none;
-
-  &__item {
-    padding-right: 40px;
-
-    &:last-child {
-      padding-right: 0;
-    }
-  }
 
   &__link {
     text-decoration: none;

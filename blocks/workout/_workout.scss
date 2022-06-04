@@ -1,0 +1,11 @@
+.workout {
+  padding: 150px 120px 120px;
+  display: flex;
+  justify-content: space-between;
+
+  &__photo {
+    width: 580px;
+    height: 460px;
+    display: block;
+  }
+}
