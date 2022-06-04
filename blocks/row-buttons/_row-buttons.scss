@@ -1,6 +1,7 @@
 .row-buttons {
   margin: 50px auto 60px 0;
   display: flex;
+  gap: 20px;
 
   &__button {
     width: 50px;
@@ -11,10 +12,6 @@
     background-color: #EBEBEB;
     background-repeat: no-repeat;
     background-position: center center;
-
-    &:first-child {
-      margin-right: 20px;
-    }
 
     &_left {
       background-image: url(.../../../images/icons/arrow-left.svg);

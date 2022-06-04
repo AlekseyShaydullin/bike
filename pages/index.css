@@ -627,6 +627,7 @@ template {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  gap: 20px;
 }
 
 .row-buttons__button {
@@ -638,10 +639,6 @@ template {
   background-color: #EBEBEB;
   background-repeat: no-repeat;
   background-position: center center;
-}
-
-.row-buttons__button:first-child {
-  margin-right: 20px;
 }
 
 .row-buttons__button_left {
@@ -799,5 +796,118 @@ template {
   line-height: 28px;
   color: #151515;
   text-decoration: none;
+}
+
+.footer {
+  padding: 80px 120px 60px;
+}
+
+.footer__title {
+  width: 229px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.footer__input {
+  width: 360px;
+  height: 50px;
+  padding-left: 20px;
+  border: 1px solid rgba(199, 199, 199, 0.5);
+  border-radius: 4px;
+  background-color: inherit;
+}
+
+.footer__wrapper {
+  padding-top: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.footer__copyright {
+  margin: 0;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  color: #CFCFCF;
+}
+
+.footer-switcher {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 22px;
+}
+
+.footer-switcher__sun {
+  width: 28px;
+  height: 28px;
+  border: none;
+  padding: 0;
+  background-image: url(.../../../images/icons/icon-sun.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: transparent;
+}
+
+.footer-switcher__light {
+  display: inline-block;
+  width: 44px;
+  height: 24px;
+  border-radius: 12px;
+  background: #FFF;
+  z-index: 0;
+  margin: 0;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  -webkit-transition-duration: 300ms;
+          transition-duration: 300ms;
+}
+
+.footer-switcher__light::after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #24B47E;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  z-index: 1;
+  -webkit-transition-duration: 300ms;
+          transition-duration: 300ms;
+}
+
+.footer-switcher__dark {
+  background: #545454;
+}
+
+.footer-switcher__dark::after {
+  left: 22px;
+}
+
+.footer-switcher__moon {
+  width: 20px;
+  height: 20px;
+  border: none;
+  padding: 0;
+  background-image: url(.../../../images/icons/icon-moon.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: transparent;
 }
 /*# sourceMappingURL=index.css.map */
