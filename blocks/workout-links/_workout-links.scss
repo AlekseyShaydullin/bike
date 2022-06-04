@@ -1,0 +1,16 @@
+.workout-links {
+  margin: 0;
+  padding: 182px 0 0;
+  list-style: none;
+  display: flex;
+  gap: 30px;
+
+  &__link {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 28px;
+    color: #151515;
+    text-decoration: none;
+  }
+}
