@@ -1,0 +1,30 @@
+.choice-bike-menu {
+  margin: 0;
+  padding-left: 0;
+  display: flex;
+  align-items: flex-end;
+  list-style: none;
+
+  &__item {
+    padding-right: 40px;
+
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 28px;
+    color: #222222;
+    opacity: .7;
+
+    &_activ {
+      color: #151515;
+      opacity: 1;
+    }
+  }
+}
