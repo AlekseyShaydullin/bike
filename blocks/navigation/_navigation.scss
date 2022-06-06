@@ -18,5 +18,11 @@
     font-size: 14px;
     line-height: 18px;
     color: #151515;
+    cursor: url(.../../../images/icons/icon-cursor.svg), auto;
+    transition: opacity .1s linear;
+
+    &:hover {
+      opacity: .75;
+    }
   }
 }

@@ -9,13 +9,58 @@
     line-height: 32px;
   }
 
+  &__form {
+    max-width: 360px;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+  }
+
   &__input {
-    width: 360px;
+    max-width: 360px;
+    width: 100%;
     height: 50px;
-    padding-left: 20px;
-    border: 1px solid rgba(199, 199, 199, 0.5);
+    padding: 0 0 0 20px;
+    border: 1px solid rgba(199, 199, 199, .5);
     border-radius: 4px;
+    box-sizing: border-box;
     background-color: inherit;
+    color: rgba(34, 34, 34, 1);
+    cursor: url(.../../../images/icons/icon-cursor.svg), auto;
+
+    &:focus {
+      outline: none;
+      border-color: rgba(199, 199, 199, 1);
+    }
+
+    &:hover::placeholder {
+      color: rgba(21, 21, 21, 1);
+      transition: color .2s;
+    }
+  }
+
+  &__input-button {
+    display: none;
+    padding: 0;
+    border: none;
+    color: #151515;
+    background-color: transparent;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 28px;
+    position: absolute;
+    top: 11px;
+    right: 22px;
+    z-index: 3;
+
+    &:hover {
+      cursor: url(.../../../images/icons/icon-cursor.svg), auto;
+    }
+
+    &__input-button_active {
+      display: block;
+    }
   }
 
   &__wrapper {

@@ -385,6 +385,11 @@ template {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+  background-color: #F4F4F4;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 999;
 }
 
 .navigation {
@@ -413,6 +418,13 @@ template {
   font-size: 14px;
   line-height: 18px;
   color: #151515;
+  cursor: url(.../../../images/icons/icon-cursor.svg), auto;
+  -webkit-transition: opacity .1s linear;
+  transition: opacity .1s linear;
+}
+
+.navigation__link:hover {
+  opacity: .75;
 }
 
 .lead {
@@ -462,11 +474,34 @@ template {
   opacity: 0.7;
 }
 
-.lead__button {
+.lead__button-wrapper {
   margin-top: 50px;
-  padding: 0;
   height: 50px;
   width: 180px;
+}
+
+.lead__button-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 412px;
+  left: 120px;
+  width: 0;
+  height: 50px;
+  background-color: #319E75;
+  border-radius: 4px;
+  -webkit-transition: all 2s ease;
+  transition: all 2s ease;
+  z-index: 0;
+}
+
+.lead__button-wrapper:hover::before {
+  width: 180px;
+}
+
+.lead__button {
+  height: 50px;
+  width: 180px;
+  padding: 0;
   text-align: center;
   background-color: #24B47E;
   border-radius: 4px;
@@ -476,6 +511,8 @@ template {
   font-size: 14px;
   line-height: 18px;
   color: #FFF;
+  cursor: url(.../../../images/icons/icon-cursor.svg), auto;
+  z-index: 3;
 }
 
 .lead__wrapper-sticky {
@@ -685,6 +722,13 @@ template {
   background-color: #EBEBEB;
   background-repeat: no-repeat;
   background-position: center center;
+  cursor: url(.../../../images/icons/icon-cursor.svg), auto;
+  -webkit-transition: opacity .1s linear;
+  transition: opacity .1s linear;
+}
+
+.row-buttons__button:hover {
+  opacity: .6;
 }
 
 .row-buttons__button_left {
@@ -737,11 +781,24 @@ template {
   line-height: 28px;
   color: #222222;
   opacity: .7;
+  cursor: url(.../../../images/icons/icon-cursor.svg), auto;
+  -webkit-transition: opacity .1s linear;
+  transition: opacity .1s linear;
+}
+
+.choice-bike-menu__link:hover {
+  opacity: .6;
 }
 
 .choice-bike-menu__link_activ {
   color: #151515;
   opacity: 1;
+  -webkit-transition: opacity .1s linear;
+  transition: opacity .1s linear;
+}
+
+.choice-bike-menu__link_activ:hover {
+  opacity: .75;
 }
 
 .bike-cards {
@@ -768,6 +825,7 @@ template {
   margin: 20px 20px;
   width: 340px;
   height: 340px;
+  cursor: url(.../../../images/icons/icon-cursor.svg), auto;
 }
 
 .bike-card__caption {
@@ -842,6 +900,13 @@ template {
   line-height: 28px;
   color: #151515;
   text-decoration: none;
+  cursor: url(.../../../images/icons/icon-cursor.svg), auto;
+  -webkit-transition: opacity .1s linear;
+  transition: opacity .1s linear;
+}
+
+.workout-links__link:hover {
+  opacity: .75;
 }
 
 .footer {
@@ -856,13 +921,78 @@ template {
   line-height: 32px;
 }
 
+.footer__form {
+  max-width: 360px;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
 .footer__input {
-  width: 360px;
+  max-width: 360px;
+  width: 100%;
   height: 50px;
-  padding-left: 20px;
+  padding: 0 0 0 20px;
   border: 1px solid rgba(199, 199, 199, 0.5);
   border-radius: 4px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   background-color: inherit;
+  color: #222222;
+  cursor: url(.../../../images/icons/icon-cursor.svg), auto;
+}
+
+.footer__input:focus {
+  outline: none;
+  border-color: #c7c7c7;
+}
+
+.footer__input:hover::-webkit-input-placeholder {
+  color: #151515;
+  -webkit-transition: color .2s;
+  transition: color .2s;
+}
+
+.footer__input:hover:-ms-input-placeholder {
+  color: #151515;
+  -webkit-transition: color .2s;
+  transition: color .2s;
+}
+
+.footer__input:hover::-ms-input-placeholder {
+  color: #151515;
+  -webkit-transition: color .2s;
+  transition: color .2s;
+}
+
+.footer__input:hover::placeholder {
+  color: #151515;
+  -webkit-transition: color .2s;
+  transition: color .2s;
+}
+
+.footer__input-button {
+  display: none;
+  padding: 0;
+  border: none;
+  color: #151515;
+  background-color: transparent;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 28px;
+  position: absolute;
+  top: 11px;
+  right: 22px;
+  z-index: 3;
+}
+
+.footer__input-button:hover {
+  cursor: url(.../../../images/icons/icon-cursor.svg), auto;
+}
+
+.footer__input-button__input-button_active {
+  display: block;
 }
 
 .footer__wrapper {
@@ -906,6 +1036,7 @@ template {
   background-repeat: no-repeat;
   background-position: center center;
   background-color: transparent;
+  cursor: url(.../../../images/icons/icon-cursor.svg), auto;
 }
 
 .footer-switcher__light {
@@ -922,6 +1053,7 @@ template {
   position: relative;
   -webkit-transition-duration: 300ms;
           transition-duration: 300ms;
+  cursor: url(.../../../images/icons/icon-cursor.svg), auto;
 }
 
 .footer-switcher__light::after {
@@ -955,5 +1087,6 @@ template {
   background-repeat: no-repeat;
   background-position: center center;
   background-color: transparent;
+  cursor: url(.../../../images/icons/icon-cursor.svg), auto;
 }
 /*# sourceMappingURL=index.css.map */

@@ -12,5 +12,11 @@
     line-height: 28px;
     color: #151515;
     text-decoration: none;
+    cursor: url(.../../../images/icons/icon-cursor.svg), auto;
+    transition: opacity .1s linear;
+
+    &:hover {
+      opacity: .75;
+    }
   }
 }
