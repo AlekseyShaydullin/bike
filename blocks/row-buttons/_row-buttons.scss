@@ -12,6 +12,12 @@
     background-color: #EBEBEB;
     background-repeat: no-repeat;
     background-position: center center;
+    cursor: url(.../../../images/icons/icon-cursor.svg), auto;
+    transition: opacity .1s linear;
+
+    &:hover {
+      opacity: .6;
+    }
 
     &_left {
       background-image: url(.../../../images/icons/arrow-left.svg);

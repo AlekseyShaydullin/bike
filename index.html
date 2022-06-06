@@ -15,9 +15,9 @@
     <header class="header">
       <nav class="navigation">
         <ul class="navigation__list">
-          <li><a href="#" class="navigation__link">Покрытия и градиенты</a></li>
-          <li><a href="#" class="navigation__link">Велосипеды</a></li>
-          <li><a href="#" class="navigation__link">Тренировки</a></li>
+          <li><a href="#variety" class="navigation__link">Покрытия и градиенты</a></li>
+          <li><a href="#choice-bike" class="navigation__link">Велосипеды</a></li>
+          <li><a href="#workout" class="navigation__link">Тренировки</a></li>
         </ul>
       </nav>
     </header>
@@ -28,7 +28,9 @@
           <h1 class="lead__title">Шоссе, ТТ и&nbspГрэвел</h1>
           <img class="lead__photo" src="./images/road-Intro.jpg" alt="Велосипедист едет по горной дороге в лесу" />
           <p class="lead__subtitle">Триатлонные старты, горные серпантины или грейвел заезды по живописным маршрутам – нужно только определиться с выбором велосипеда и отправиться в путь.</p>
-          <button type="button" class="lead__button" aria-label="Подробне">Подробнее</button>
+          <div class="lead__button-wrapper">
+            <button type="button" class="lead__button" aria-label="Подробне">Подробнее</button>
+          </div>
           <p class="lead__name-bike">Cannondale Systemsix</p>
         </div>
         <div class="lead__wrapper-sticky">
@@ -51,7 +53,7 @@
         </figure>
       </section>
       <!--Блок Variety-->
-      <section class="variety">
+      <section id="variety" class="variety">
         <h2 class="variety__title">Шоссе</h2>
         <p class="variety__subtitle">На шоссейном велосипеде можно ездить по асфальту на разных градиентах: будь то горы или равнины. Гонки проходят в командном пелотоне, но тренироваться можно и самостоятельно.</p>
         <div class="row-photo">
@@ -69,7 +71,7 @@
         </div>
       </section>
       <!--Блок Choice-Bike-->
-      <section class="choice-bike">
+      <section id="choice-bike" class="choice-bike">
         <div class="choice-bike-header">
           <h2 class="choice-bike-header__title">Велосипеды</h2>
           <ul class="choice-bike-menu">
@@ -94,7 +96,7 @@
         </div>
       </section>
       <!--Блок Workout-->
-      <section class="workout">
+      <section id="workout" class="workout">
         <div class="workout-info">
           <h2 class="workout-info__title">Тренировки</h2>
           <p class="workout-info__subtitle">Чтобы найти маршрут для тренировки можно воспользоваться сервисом Komoot, а записать эти тренировки поможет приложение Strava, а также это приложение позволит построить тренировочный план.</p>
@@ -110,13 +112,14 @@
     <footer class="footer">
       <h3 class="footer__title">Подпишитесь на рассылку —</h3>
       <form class="footer__form">
-        <input class="footer__input" type="email" placeholder="Ваш e-mail">
+        <input class="footer__input" type="email" placeholder="Ваш e-mail" required>
+        <button type="submit" class="footer__input-button">ok</button>
       </form>
       <div class="footer__wrapper">
         <p class="footer__copyright">&copy Road Club 2022</p>
         <div class="footer-switcher">
           <button type="button" class="footer-switcher__sun" aria-label="Кнопка солнце"></button>
-          <div class="footer-switcher__light"></div>
+          <span class="footer-switcher__light"></span>
           <button type="button" class="footer-switcher__moon" aria-label="Кнопка луна"></button>
         </div>
       </div>

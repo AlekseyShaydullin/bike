@@ -12,6 +12,7 @@
     background-repeat: no-repeat;
     background-position: center center;
     background-color: transparent;
+    cursor: url(.../../../images/icons/icon-cursor.svg), auto;
   }
 
   &__light {
@@ -27,6 +28,7 @@
     cursor: pointer;
     position: relative;
     transition-duration: 300ms;
+    cursor: url(.../../../images/icons/icon-cursor.svg), auto;
 
     &::after {
       content: "";
@@ -59,5 +61,6 @@
     background-repeat: no-repeat;
     background-position: center center;
     background-color: transparent;
+    cursor: url(.../../../images/icons/icon-cursor.svg), auto;
   }
 }

@@ -4,4 +4,8 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
+  background-color: #F4F4F4;
+  position: sticky;
+  top: 0;
+  z-index: 999;
 }

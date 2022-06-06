@@ -14,10 +14,21 @@
     line-height: 28px;
     color: #222222;
     opacity: .7;
+    cursor: url(.../../../images/icons/icon-cursor.svg), auto;
+    transition: opacity .1s linear;
+
+    &:hover {
+      opacity: .6;
+    }
 
     &_activ {
       color: #151515;
       opacity: 1;
+      transition: opacity .1s linear;
+
+      &:hover {
+        opacity: .75;
+      }
     }
   }
 }
