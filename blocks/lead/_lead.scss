@@ -43,23 +43,6 @@
     margin-top: 50px;
     height: 50px;
     width: 180px;
-
-    &::before {
-      content: "";
-      position: absolute;
-      top: 412px;
-      left: 120px;
-      width: 0;
-      height: 50px;
-      background-color: #319E75;
-      border-radius: 4px;
-      transition: all 2s ease;
-      z-index: 0;
-    }
-
-    &:hover::before {
-      width: 180px;
-    }
   }
 
   &__button {
@@ -77,6 +60,24 @@
     color: #FFF;
     cursor: url(.../../../images/icons/icon-cursor.svg), auto;
     z-index: 3;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 412px;
+      left: 120px;
+      width: 0;
+      height: 50px;
+      background-color: #319E75;
+      border-radius: 4px;
+      color: #FFF;
+      transition: all 2s ease;
+      z-index: 0;
+    }
+
+    &:hover::before {
+      width: 180px;
+    }
   }
 
   &__wrapper-sticky {
