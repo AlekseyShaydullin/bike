@@ -5,12 +5,15 @@
   box-shadow: 0 20px 140px 0px rgba(0, 0, 0, .06);
   border-radius: 20px;
 
+  &__link {
+    cursor: url(.../../../images/icons/icon-cursor.svg), auto;
+  }
+
   &__photo {
     display: block;
     margin: 20px 20px;
     width: 340px;
     height: 340px;
-    cursor: url(.../../../images/icons/icon-cursor.svg), auto;
   }
 
   &__caption {
