@@ -4,9 +4,6 @@
 
   &__title {
     margin: 0;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 55px;
-    line-height: 60px;
+    @extend %font-title;
   }
 }

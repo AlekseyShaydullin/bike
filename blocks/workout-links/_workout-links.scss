@@ -6,11 +6,8 @@
   gap: 30px;
 
   &__link {
-    font-style: normal;
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 28px;
-    color: #151515;
+    @extend %font-menu-link-activ;
+    color: $color-ft;
     text-decoration: none;
     cursor: url(.../../../images/icons/icon-cursor.svg), auto;
     transition: opacity .1s linear;

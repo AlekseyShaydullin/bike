@@ -1,22 +1,13 @@
 .signature {
-
-
   &__quote-author {
     margin: 0;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 32px;
+    @extend %font-autor;
   }
 
   &__quote-author-subline {
     margin: 0;
     padding-top: 6px;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 28px;
-    color: #222222;
-    opacity: 0.7;
+    @extend %font-autor-subline;
+    color: $color-fst;
   }
 }

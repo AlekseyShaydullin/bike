@@ -1,0 +1,135 @@
+//шрифты:
+%font-nav {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+%font-title {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 55px;
+  line-height: 60px;
+  letter-spacing: -.5px;
+}
+
+%font-subtitle {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  opacity: .7;
+}
+
+%font-button {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+%font-prompt {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 18px;
+}
+
+%font-quote {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 34px;
+  line-height: 44px;
+  letter-spacing: -.5px;
+}
+
+%font-autor {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 32px;
+}
+
+%font-autor-subline {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+  opacity: 0.7;
+}
+
+%font-menu-link {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  opacity: .7;
+}
+
+%font-menu-link-activ {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 28px;
+  opacity: 1;
+}
+
+%font-card-caption {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+%font-footer-title {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+}
+
+%font-footer-input {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 28px;
+}
+
+%font-footer-copyright {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+//цвет background:
+$color-back: #F4F4F4;
+$color-back-n: #333333;
+
+//цвет шрифтов:
+$color-ft: #151515;
+$color-ft-n: #FFFFFF;
+$color-fst: #222222;
+$color-fst-n: #E6E6E6;
+$color-as-n: #E5E5E5;
+$color-ffc: #CFCFCF;
+$color-ffc-n: #565656;
+
+//цвет бордера:
+$color-brd: #D7D4D4;
+
+//цвет shadow:
+$color-shadow: rgba(0, 0, 0, .14);
+
+//цвет кнопок:
+$color-greenbtn: #24B47E;
+$color-greenbtn-hv: #319E75;
+$color-greybtn: #EBEBEB;
+$color-swback-n: #545454;
+
+//цвета формы:
+$color-font-input: rgba(34, 34, 34, 1);
+$color-font-input-hvr: rgba(21, 21, 21, 1);
+$color-brd-input: rgba(199, 199, 199, .5);
+$color-brd-input-focus: rgba(199, 199, 199, 1);

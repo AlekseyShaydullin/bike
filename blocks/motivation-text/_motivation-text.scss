@@ -8,10 +8,7 @@
 
   &__quote {
     margin: 0;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 34px;
-    line-height: 44px;
+    @extend %font-quote;
 
     & p {
       margin: 0;

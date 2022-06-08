@@ -20,12 +20,11 @@
     width: 44px;
     height: 24px;
     border-radius: 12px;
-    background: #FFF;
+    background: $color-ft-n;
     z-index: 0;
     margin: 0;
     padding: 0;
     border: none;
-    cursor: pointer;
     position: relative;
     transition-duration: 300ms;
     cursor: url(.../../../images/icons/icon-cursor.svg), auto;
@@ -35,7 +34,7 @@
       width: 20px;
       height: 20px;
       border-radius: 50%;
-      background: #24B47E;
+      background: $color-greenbtn;
       position: absolute;
       top: 2px;
       left: 2px;
@@ -45,7 +44,7 @@
   }
 
   &__dark {
-    background: #545454;
+    background: $color-swback-n;
 
     &::after {
       left: 22px;
