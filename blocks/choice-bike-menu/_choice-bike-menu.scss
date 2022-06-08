@@ -8,12 +8,8 @@
 
   &__link {
     text-decoration: none;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 28px;
-    color: #222222;
-    opacity: .7;
+    @extend %font-menu-link;
+    color: $color-fst;
     cursor: url(.../../../images/icons/icon-cursor.svg), auto;
     transition: opacity .1s linear;
 
@@ -22,8 +18,8 @@
     }
 
     &_activ {
-      color: #151515;
-      opacity: 1;
+      @extend %font-menu-link-activ;
+      color: $color-ft;
       transition: opacity .1s linear;
 
       &:hover {

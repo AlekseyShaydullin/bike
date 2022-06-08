@@ -2,7 +2,13 @@
   max-width: 1440px;
   width: 100%;
   margin: auto;
-  background-color: #F4F4F4;
+  background-color: $color-back;
   font-family: Inter, sans-serif;
-  color: #151515;
+  color: $color-ft;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }

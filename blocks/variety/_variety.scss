@@ -6,21 +6,15 @@
 
   &__title {
     margin: 0;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 55px;
-    line-height: 60px;
+    @extend %font-title;
   }
 
   &__subtitle {
     max-width: 460px;
+    width: 100%;
     margin: 0;
     padding-top: 50px;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 28px;
-    color: #222222;
-    opacity: 0.7;
+    @extend %font-subtitle;
+    color: $color-fst;
   }
 }

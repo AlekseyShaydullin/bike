@@ -13,11 +13,8 @@
 
   &__link {
     text-decoration: none;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 18px;
-    color: #151515;
+    @extend %font-nav;
+    color: $color-ft;
     cursor: url(.../../../images/icons/icon-cursor.svg), auto;
     transition: opacity .1s linear;
 
