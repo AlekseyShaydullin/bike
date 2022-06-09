@@ -27,4 +27,28 @@
       background-image: url(.../../../images/icons/arrow-right.svg);
     }
   }
+
+  @media screen and (max-width: 320px) {
+    margin: 0;
+    position: absolute;
+    top: 87px;
+    right: 18px;
+
+    &__button {
+      width: 24px;
+      height: 24px;
+
+      &_left {
+        width: 5px;
+        height: 10px;
+
+      }
+
+      &_right {
+        width: 5px;
+        height: 10px;
+
+      }
+    }
+  }
 }

@@ -21,6 +21,6 @@
 
   &__caption {
     padding-top: 20px;
-    @extend %font-card-caption;
+    @include font(normal, 600, 18px, 22px);
   }
 }

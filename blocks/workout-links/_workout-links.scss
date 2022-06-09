@@ -6,7 +6,7 @@
   gap: 30px;
 
   &__link {
-    @extend %font-menu-link-activ;
+    @include font(normal, 600, 18px, 28px);
     color: $color-ft;
     text-decoration: none;
     cursor: url(.../../../images/icons/icon-cursor.svg), auto;

@@ -8,7 +8,8 @@
 
   &__link {
     text-decoration: none;
-    @extend %font-menu-link;
+    @include font(normal, 400, 18px, 28px);
+    opacity: .7;
     color: $color-fst;
     cursor: url(.../../../images/icons/icon-cursor.svg), auto;
     transition: opacity .1s linear;
@@ -18,7 +19,7 @@
     }
 
     &_activ {
-      @extend %font-menu-link-activ;
+      @include font(normal, 600, 18px, 28px);
       color: $color-ft;
       transition: opacity .1s linear;
 

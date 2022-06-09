@@ -10,7 +10,8 @@
     width: 460px;
     margin: 0;
     padding-top: 80px;
-    @extend %font-title;
+    @include font(normal, 700, 55px, 60px);
+    letter-spacing: -.5px;
   }
 
   &__photo {
@@ -30,7 +31,8 @@
     width: 100%;
     margin: 0;
     padding-top: 50px;
-    @extend %font-subtitle;
+    @include font(normal, 400, 18px, 28px);
+    opacity: .7;
     color: $color-fst;
   }
 
@@ -46,7 +48,7 @@
     transition: background .3s ease-out;
     border-radius: 4px;
     border: none;
-    @extend %font-button;
+    @include font(normal, 600, 14px, 18px);
     color: $color-ft-n;
     cursor: url(.../../../images/icons/icon-cursor.svg), auto;
 
@@ -64,7 +66,7 @@
     margin: 0;
     padding-top: 167px;
     display: flex;
-    @extend %font-prompt;
+    @include font(normal, 400, 18px, 18px);
 
     &::after {
       content: '';
@@ -95,5 +97,62 @@
     width: 340px;
     height: 260px;
     object-fit: cover;
+  }
+
+  @media screen and (max-width: 320px) {
+    padding: 0 18px;
+    height: 746px;
+    flex-direction: column;
+
+    &__title {
+      max-width: 284px;
+      width: 100%;
+      padding-top: 40px;
+      @include font(normal, 700, 32px, 40px);
+    }
+
+    &__photo {
+      max-width: 254px;
+      width: 100%;
+      height: 348px;
+      padding-top: 40px;
+      padding-left: 30px;
+      position: relative;
+    }
+
+    &__subtitle {
+      max-width: 284px;
+      width: 100%;
+      @include font(normal, 400, 12px, 18px);
+    }
+
+    &__button {
+      margin-top: 40px;
+      margin-bottom: 40px;
+      height: 46px;
+      max-width: 284px;
+      width: 100%;
+      @include font(normal, 600, 13px, 19px);
+    }
+
+    &__name-bike {
+      display: none;
+    }
+
+    &__wrapper-sticky {
+      padding: 0;
+    }
+
+    &__wrapper-photo {
+      width: 234px;
+      height: 160px;
+      position: absolute;
+      top: 311px;
+    }
+
+    &__photo-preview {
+      width: 181px;
+      height: 139px;
+    }
   }
 }
