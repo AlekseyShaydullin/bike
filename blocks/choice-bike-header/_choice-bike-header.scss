@@ -4,6 +4,12 @@
 
   &__title {
     margin: 0;
-    @extend %font-title;
+    @include font(normal, 700, 55px, 60px);
+    letter-spacing: -.5px;
   }
+
+  @media screen and (max-width: 320px) {
+    flex-direction: column;
+  }
+
 }

@@ -1,13 +1,26 @@
 .signature {
   &__quote-author {
     margin: 0;
-    @extend %font-autor;
+    @include font(normal, 500, 20px, 32px);
   }
 
   &__quote-author-subline {
     margin: 0;
     padding-top: 6px;
-    @extend %font-autor-subline;
+    @include font(normal, 400, 16px, 28px);
     color: $color-fst;
+    opacity: .7;
+  }
+
+  @media screen and (max-width: 320px) {
+    &__quote-author {
+      padding-top: 40px;
+      @include font(normal, 500, 14px, 22px);
+    }
+
+    &__quote-author-subline {
+      padding-top: 4px;
+      @include font(normal, 400, 10px, 16px);
+    }
   }
 }

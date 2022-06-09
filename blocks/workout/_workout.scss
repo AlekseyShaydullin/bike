@@ -8,4 +8,13 @@
     height: 460px;
     display: block;
   }
+
+  @media screen and (max-width: 320px) {
+    flex-direction: column;
+
+    &__photo {
+      width: 284px;
+      height: 225px;
+    }
+  }
 }

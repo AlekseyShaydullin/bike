@@ -4,7 +4,8 @@
 
   &__title {
     margin: 0;
-    @extend %font-title;
+    @include font(normal, 700, 55px, 60px);
+    letter-spacing: -.5px;
   }
 
   &__subtitle {
@@ -12,7 +13,8 @@
     padding-top: 50px;
     max-width: 460px;
     width: 100%;
-    @extend %font-subtitle;
+    @include font(normal, 400, 18px, 28px);
     color: $color-fst;
+    opacity: .7;
   }
 }
