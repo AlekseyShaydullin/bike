@@ -13,6 +13,7 @@
   <div class="page">
     <!--Шапка сайта-->
     <header class="header">
+      <button type="button" class="header__burger" aria-label="Кнопка бургер"></button>
       <nav class="navigation">
         <ul class="navigation__list">
           <li><a href="#variety" class="navigation__link">Покрытия и градиенты</a></li>
@@ -21,6 +22,7 @@
         </ul>
       </nav>
     </header>
+    <!--Основной контент-->
     <main class="content">
       <!--Блок Lead-->
       <section class="lead">
@@ -127,6 +129,21 @@
         <div class="footer__logo"></div>
       </div>
     </footer>
+    <!--Модалка Бургера-->
+    <div class="modal-burger">
+      <nav class="navigation" id="modal-navigation">
+        <ul class="navigation__list">
+          <li><a href="#variety" class="navigation__link" id="navigation-variety">Покрытия и градиенты</a></li>
+          <li><a href="#choice-bike" class="navigation__link" id="navigation-choice-bike">Велосипеды</a></li>
+          <li><a href="#workout" class="navigation__link" id="navigation-workout">Тренировки</a></li>
+        </ul>        
+      </nav>
+      <div class="footer-switcher" id="modal-switcher">
+        <button type="button" class="footer-switcher__sun" aria-label="Кнопка солнце"></button>
+        <span class="footer-switcher__light"></span>
+        <button type="button" class="footer-switcher__moon" aria-label="Кнопка луна"></button>
+      </div>
+    </div>
   </div>
   <script src="script.js"></script>
 </body>
