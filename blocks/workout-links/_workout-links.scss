@@ -16,4 +16,12 @@
       opacity: .75;
     }
   }
+
+  @media screen and (max-width: 320px) {
+    padding: 40px 0 0;
+
+    &__link {
+      @include font(normal, 600, 14px, 20px);
+    }
+  }
 }

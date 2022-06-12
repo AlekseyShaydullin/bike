@@ -10,6 +10,11 @@
 
   @media screen and (max-width: 320px) {
     flex-direction: column;
+
+    &__title {
+      @include font(normal, 700, 32px, 40px);
+    }
+
   }
 
 }

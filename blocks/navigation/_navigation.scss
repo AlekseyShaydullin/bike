@@ -24,7 +24,18 @@
   }
 
   @media screen and (max-width: 320px) {
-    background: url(.../../../images/icons/icon-burger.svg) no-repeat center;
-    background-size: contain;
+
+    &__list {
+      width: 22px;
+      height: 16px;
+      background: url(.../../../images/icons/icon-burger.svg) no-repeat center;
+      background-size: contain;
+    }
+
+    &__list_activ {
+      background: url(.../../../images/icons/icon-burger-close.svg) no-repeat center;
+      background-size: contain;
+    }
+
   }
 }

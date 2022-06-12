@@ -1,4 +1,9 @@
 .choice-bike {
   padding: 60px 120px;
   box-sizing: border-box;
+
+  @media screen and (max-width: 320px) {
+    padding: 40px 18px;
+
+  }
 }
