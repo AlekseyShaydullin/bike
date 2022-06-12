@@ -62,4 +62,8 @@
     background-color: transparent;
     cursor: url(.../../../images/icons/icon-cursor.svg), auto;
   }
+
+  @media screen and (max-width: 320px) {
+    display: none;
+  }
 }
