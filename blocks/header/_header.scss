@@ -1,13 +1,42 @@
 .header {
-  width: 100%;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
+  align-items: center;
   background-color: $color-back;
   position: sticky;
   top: 0;
   z-index: 999;
 
-  @media screen and (max-width: 320px) {}
+  &__burger {
+    display: none;
+  }
+
+  @media screen and (max-width: 320px) {
+    max-width: 320px;
+    width: 100%;
+    height: 74px;
+
+    &__burger {
+      width: 30px;
+      height: 27px;
+      margin-right: 18px;
+      padding: 0;
+      display: block;
+      background: url(.../../../images/icons/icon-burger.svg) no-repeat center;
+      background-size: contain;
+      background-color: transparent;
+      border: none;
+      cursor: url(.../../../images/icons/icon-cursor.svg), auto;
+      transition: .3s all linear;
+    }
+
+    &__burger_activ {
+      width: 32px;
+      height: 33px;
+      background: url(.../../../images/icons/icon-burger-close.svg) no-repeat center;
+      background-size: contain;
+    }
+  }
 }
