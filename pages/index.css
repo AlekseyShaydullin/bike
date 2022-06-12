@@ -1447,13 +1447,6 @@ template {
 .footer-switcher__sun {
   width: 28px;
   height: 28px;
-  border: none;
-  padding: 0;
-  background-image: url(.../../../images/icons/icon-sun.svg);
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-color: transparent;
-  cursor: url(.../../../images/icons/icon-cursor.svg), auto;
 }
 
 .footer-switcher__light {
@@ -1486,24 +1479,17 @@ template {
           transition-duration: 300ms;
 }
 
-.footer-switcher__dark {
+.footer-switcher__light_dark {
   background: #545454;
 }
 
-.footer-switcher__dark::after {
+.footer-switcher__light_dark::after {
   left: 22px;
 }
 
 .footer-switcher__moon {
   width: 20px;
   height: 20px;
-  border: none;
-  padding: 0;
-  background-image: url(.../../../images/icons/icon-moon.svg);
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-color: transparent;
-  cursor: url(.../../../images/icons/icon-cursor.svg), auto;
 }
 
 @media screen and (max-width: 320px) {

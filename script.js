@@ -6,6 +6,7 @@ const modalSwitcher = document.querySelector('#modal-switcher')
 const navigationVariety = document.querySelector('#navigation-variety');
 const navigationChoiceBike = document.querySelector('#navigation-choice-bike');
 const navigationWorkout = document.querySelector('#navigation-workout');
+const switcherLight = document.querySelector('.footer-switcher__light');
 
 //Бургер меню
 
@@ -30,3 +31,13 @@ navigationVariety.addEventListener('click', (evt) => openCloseMenu());
 moadalNovigation.addEventListener('click', (evt) => openCloseMenu());
 
 navigationVariety.addEventListener('click', (evt) => openCloseMenu());
+
+//Темная тема сайта 
+
+function darkTheme() {
+  switcherLight.addEventListener('click', () => {
+    switcherLight.classList.toggle('footer-switcher__light_dark');
+  })
+}
+
+darkTheme();
