@@ -12,6 +12,10 @@
     cursor: url(.../../../images/icons/icon-cursor.svg), auto;
     transition: opacity .1s linear;
 
+    &_dark {
+      color: $color-ft-n;
+    }
+
     &:hover {
       opacity: .75;
     }

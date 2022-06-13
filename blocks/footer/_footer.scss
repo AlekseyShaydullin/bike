@@ -27,6 +27,11 @@
     color: $color-font-input;
     cursor: url(.../../../images/icons/icon-cursor.svg), auto;
 
+    &_dark {
+      color: $color-ft-n;
+      opacity: .5;
+    }
+
     &:focus {
       outline: none;
       border-color: $color-brd-input-focus;
@@ -69,6 +74,10 @@
     margin: 0;
     @include font(normal, 600, 14px, 20px);
     color: $color-ffc;
+
+    &_dark {
+      color: $color-ffc-n;
+    }
   }
 
   &__logo {

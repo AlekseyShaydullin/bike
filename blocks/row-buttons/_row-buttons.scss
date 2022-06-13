@@ -15,6 +15,10 @@
     cursor: url(.../../../images/icons/icon-cursor.svg), auto;
     transition: opacity .1s linear;
 
+    &_dark {
+      background-color: $color-greenbtn-n;
+    }
+
     &:hover {
       opacity: .6;
     }
@@ -25,6 +29,14 @@
 
     &_right {
       background-image: url(.../../../images/icons/arrow-right.svg);
+    }
+
+    &_left-dark {
+      background-image: url(.../../../images/icons/arrow-left-black.svg);
+    }
+
+    &_right-dark {
+      background-image: url(.../../../images/icons/arrow-right-black.svg);
     }
   }
 
