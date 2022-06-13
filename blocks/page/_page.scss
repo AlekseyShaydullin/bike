@@ -11,4 +11,9 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+
+  &_dark {
+    background-color: $color-back-n;
+    color: $color-ft-n;
+  }
 }

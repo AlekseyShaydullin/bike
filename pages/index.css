@@ -380,6 +380,11 @@ template {
   text-rendering: optimizeLegibility;
 }
 
+.page_dark {
+  background-color: #333333;
+  color: #FFFFFF;
+}
+
 .header {
   margin: 0 auto;
   display: -webkit-box;
@@ -402,6 +407,10 @@ template {
 
 .header__burger {
   display: none;
+}
+
+.header_dark {
+  background-color: #333333;
 }
 
 @media screen and (max-width: 320px) {
@@ -461,6 +470,10 @@ template {
   cursor: url(.../../../images/icons/icon-cursor.svg), auto;
   -webkit-transition: opacity .1s linear;
   transition: opacity .1s linear;
+}
+
+.navigation__link_dark {
+  color: #FFFFFF;
 }
 
 .navigation__link:hover {
@@ -544,6 +557,10 @@ template {
   line-height: 28px;
   opacity: .7;
   color: #222222;
+}
+
+.lead__subtitle_dark {
+  color: #E6E6E6;
 }
 
 .lead__button {
@@ -787,6 +804,10 @@ template {
   opacity: .7;
 }
 
+.signature__quote-author-subline_dark {
+  color: #E5E5E5;
+}
+
 @media screen and (max-width: 320px) {
   .signature__quote-author {
     padding-top: 40px;
@@ -833,6 +854,10 @@ template {
   line-height: 28px;
   color: #222222;
   opacity: .7;
+}
+
+.variety__subtitle_dark {
+  color: #E5E5E5;
 }
 
 @media screen and (max-width: 320px) {
@@ -960,6 +985,10 @@ template {
   transition: opacity .1s linear;
 }
 
+.row-buttons__button_dark {
+  background-color: #434343;
+}
+
 .row-buttons__button:hover {
   opacity: .6;
 }
@@ -970,6 +999,14 @@ template {
 
 .row-buttons__button_right {
   background-image: url(.../../../images/icons/arrow-right.svg);
+}
+
+.row-buttons__button_left-dark {
+  background-image: url(.../../../images/icons/arrow-left-black.svg);
+}
+
+.row-buttons__button_right-dark {
+  background-image: url(.../../../images/icons/arrow-right-black.svg);
 }
 
 @media screen and (max-width: 320px) {
@@ -1064,6 +1101,10 @@ template {
   transition: opacity .1s linear;
 }
 
+.choice-bike-menu__link_dark {
+  color: #E5E5E5;
+}
+
 .choice-bike-menu__link:hover {
   opacity: .6;
 }
@@ -1080,6 +1121,20 @@ template {
 
 .choice-bike-menu__link_activ:hover {
   opacity: .75;
+}
+
+.choice-bike-menu__link_activ-dark {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 28px;
+  color: #FFFFFF;
+  -webkit-transition: opacity .1s linear;
+  transition: opacity .1s linear;
+}
+
+.choice-bike-menu__link_activ-dark:hover {
+  opacity: .65;
 }
 
 @media screen and (max-width: 320px) {
@@ -1219,6 +1274,10 @@ template {
   opacity: .7;
 }
 
+.workout__subtitle_dark {
+  color: #E5E5E5;
+}
+
 @media screen and (max-width: 320px) {
   .workout {
     -webkit-box-orient: vertical;
@@ -1269,6 +1328,10 @@ template {
   cursor: url(.../../../images/icons/icon-cursor.svg), auto;
   -webkit-transition: opacity .1s linear;
   transition: opacity .1s linear;
+}
+
+.workout-links__link_dark {
+  color: #FFFFFF;
 }
 
 .workout-links__link:hover {
@@ -1323,6 +1386,11 @@ template {
   line-height: 28px;
   color: #222222;
   cursor: url(.../../../images/icons/icon-cursor.svg), auto;
+}
+
+.footer__input_dark {
+  color: #FFFFFF;
+  opacity: .5;
 }
 
 .footer__input:focus {
@@ -1399,6 +1467,10 @@ template {
   color: #CFCFCF;
 }
 
+.footer__copyright_dark {
+  color: #565656;
+}
+
 .footer__logo {
   display: none;
 }
@@ -1447,13 +1519,6 @@ template {
 .footer-switcher__sun {
   width: 28px;
   height: 28px;
-  border: none;
-  padding: 0;
-  background-image: url(.../../../images/icons/icon-sun.svg);
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-color: transparent;
-  cursor: url(.../../../images/icons/icon-cursor.svg), auto;
 }
 
 .footer-switcher__light {
@@ -1486,24 +1551,17 @@ template {
           transition-duration: 300ms;
 }
 
-.footer-switcher__dark {
+.footer-switcher__light_dark {
   background: #545454;
 }
 
-.footer-switcher__dark::after {
+.footer-switcher__light_dark::after {
   left: 22px;
 }
 
 .footer-switcher__moon {
   width: 20px;
   height: 20px;
-  border: none;
-  padding: 0;
-  background-image: url(.../../../images/icons/icon-moon.svg);
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-color: transparent;
-  cursor: url(.../../../images/icons/icon-cursor.svg), auto;
 }
 
 @media screen and (max-width: 320px) {
@@ -1539,6 +1597,11 @@ template {
   -webkit-transition: opacity .3s ease-out;
   transition: opacity .3s ease-out;
   z-index: 15;
+}
+
+.modal-burger_dark {
+  background-color: #333333;
+  color: #FFFFFF;
 }
 
 .modal-burger_activ {

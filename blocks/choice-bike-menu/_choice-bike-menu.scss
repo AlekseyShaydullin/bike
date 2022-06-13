@@ -14,6 +14,10 @@
     cursor: url(.../../../images/icons/icon-cursor.svg), auto;
     transition: opacity .1s linear;
 
+    &_dark {
+      color: $color-as-n;
+    }
+
     &:hover {
       opacity: .6;
     }
@@ -25,6 +29,16 @@
 
       &:hover {
         opacity: .75;
+      }
+    }
+
+    &_activ-dark {
+      @include font(normal, 600, 18px, 28px);
+      color: $color-ft-n;
+      transition: opacity .1s linear;
+
+      &:hover {
+        opacity: .65;
       }
     }
   }

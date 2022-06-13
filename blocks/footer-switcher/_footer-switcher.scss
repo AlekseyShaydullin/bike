@@ -6,13 +6,6 @@
   &__sun {
     width: 28px;
     height: 28px;
-    border: none;
-    padding: 0;
-    background-image: url(.../../../images/icons/icon-sun.svg);
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-color: transparent;
-    cursor: url(.../../../images/icons/icon-cursor.svg), auto;
   }
 
   &__light {
@@ -41,26 +34,19 @@
       z-index: 1;
       transition-duration: 300ms;
     }
-  }
 
-  &__dark {
-    background: $color-swback-n;
+    &_dark {
+      background: $color-swback-n;
 
-    &::after {
-      left: 22px;
+      &::after {
+        left: 22px;
+      }
     }
   }
 
   &__moon {
     width: 20px;
     height: 20px;
-    border: none;
-    padding: 0;
-    background-image: url(.../../../images/icons/icon-moon.svg);
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-color: transparent;
-    cursor: url(.../../../images/icons/icon-cursor.svg), auto;
   }
 
   @media screen and (max-width: 320px) {
