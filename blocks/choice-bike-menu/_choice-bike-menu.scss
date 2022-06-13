@@ -19,7 +19,7 @@
     }
 
     &:hover {
-      opacity: .6;
+      opacity: .5;
     }
 
     &_activ {
@@ -35,6 +35,7 @@
     &_activ-dark {
       @include font(normal, 600, 18px, 28px);
       color: $color-ft-n;
+      opacity: 1;
       transition: opacity .1s linear;
 
       &:hover {

@@ -2,6 +2,8 @@
   margin: 50px auto 60px 0;
   display: flex;
   gap: 20px;
+  position: absolute;
+  bottom: 0;
 
   &__button {
     width: 50px;
@@ -42,25 +44,13 @@
 
   @media screen and (max-width: 320px) {
     margin: 0;
-    position: absolute;
-    top: 87px;
-    right: 18px;
+    gap: 10px;
+    position: relative;
 
     &__button {
       width: 24px;
       height: 24px;
-
-      &_left {
-        width: 5px;
-        height: 10px;
-
-      }
-
-      &_right {
-        width: 5px;
-        height: 10px;
-
-      }
+      background-size: 50% 50%;
     }
   }
 }

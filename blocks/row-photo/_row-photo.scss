@@ -1,5 +1,6 @@
 .row-photo {
   padding-top: 80px;
+  padding-bottom: 160px;
   display: flex;
   gap: 40px;
   position: relative;
@@ -18,7 +19,7 @@
     background-repeat: no-repeat;
     background-position: center center;
     position: absolute;
-    bottom: 16px;
+    bottom: 176px;
     z-index: 3;
 
     &_sharp-turn {
@@ -58,7 +59,8 @@
     &__icon {
       width: 70px;
       height: 28px;
-      bottom: 14px;
+      background-size: 100%;
+
       z-index: 3;
     }
   }

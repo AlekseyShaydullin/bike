@@ -5,5 +5,14 @@
   @media screen and (max-width: 320px) {
     padding: 40px 18px;
 
+    &::before {
+      content: '';
+      margin-bottom: 40px;
+      width: 284px;
+      height: 0;
+      display: inline-block;
+      align-self: center;
+      border: 1px solid $color-brd;
+    }
   }
 }

@@ -1,7 +1,9 @@
 .workout {
   padding: 150px 120px 120px;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
+  position: relative;
 
   &__title {
     margin: 0;
@@ -13,6 +15,9 @@
     width: 580px;
     height: 460px;
     display: block;
+    position: absolute;
+    top: 150px;
+    right: 120px;
   }
 
   &__subtitle {
@@ -33,6 +38,16 @@
     flex-direction: column;
     padding: 40px 18px 60px;
 
+    &::before {
+      content: '';
+      margin-bottom: 40px;
+      width: 284px;
+      height: 0;
+      display: inline-block;
+      align-self: center;
+      border: 1px solid $color-brd;
+    }
+
     &__title {
       @include font(normal, 700, 32px, 40px);
     }
@@ -41,10 +56,13 @@
       padding-top: 40px;
       width: 284px;
       height: 225px;
+      position: relative;
+      top: 0;
+      right: 0;
     }
 
     &__subtitle {
-      padding-top: 50px;
+      padding-top: 40px;
       max-width: 460px;
       width: 100%;
       @include font(normal, 400, 12px, 18px);

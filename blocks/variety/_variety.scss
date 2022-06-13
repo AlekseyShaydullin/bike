@@ -1,9 +1,15 @@
 .variety {
   padding-top: 60px;
   padding-left: 120px;
-  overflow: hidden;
   position: relative;
   box-sizing: border-box;
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
 
   &__title {
     margin: 0;
@@ -14,6 +20,7 @@
   &__subtitle {
     max-width: 460px;
     width: 100%;
+    position: relative;
     margin: 0;
     padding-top: 50px;
     @include font(normal, 400, 18px, 28px);
@@ -28,27 +35,30 @@
   @media screen and (max-width: 320px) {
     height: 505px;
     padding: 40px 18px;
-  }
 
-  &__title {
-    @include font(normal, 700, 32px, 40px);
+    &__header {
 
-    &::before {
-      content: '';
-      margin-bottom: 40px;
-      width: 264px;
-      height: 0;
-      display: inline-block;
-      align-self: center;
-      border: 1px solid $color-brd;
+      &::before {
+        content: '';
+        margin-bottom: 40px;
+        width: 284px;
+        height: 0;
+        display: inline-block;
+        align-self: center;
+        border: 1px solid $color-brd;
+      }
     }
-  }
 
-  &__subtitle {
-    max-width: 284px;
-    padding-top: 0;
-    @include font(normal, 400, 12px, 18px);
-    position: absolute;
-    top: 375px;
+    &__title {
+      @include font(normal, 700, 32px, 40px);
+    }
+
+    &__subtitle {
+      max-width: 284px;
+      padding-top: 0;
+      @include font(normal, 400, 12px, 18px);
+      position: absolute;
+      top: 375px;
+    }
   }
 }
