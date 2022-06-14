@@ -54,7 +54,13 @@
       </section>
       <!--Блок Variety-->
       <section id="variety" class="variety">
-        <h2 class="variety__title">Шоссе</h2>
+        <div class="variety__header">
+          <h2 class="variety__title">Шоссе</h2>
+          <div class="row-buttons">
+            <button type="button" class="row-buttons__button row-buttons__button_left" aria-label="Кнопка влево"></button>
+            <button type="button" class="row-buttons__button row-buttons__button_right" aria-label="Кнопка вправо"></button>
+          </div>
+        </div>
         <p class="variety__subtitle">На шоссейном велосипеде можно ездить по асфальту на разных градиентах: будь то горы или равнины. Гонки проходят в командном пелотоне, но тренироваться можно и самостоятельно.</p>
         <div class="row-photo">
           <div class="row-photo__wrapper">
@@ -64,10 +70,6 @@
           <div class="row-photo__wrapper">
             <img class="row-photo__photo" src="./images/road-and-bike.jpg" alt="Велосипедист в лесу" />
           </div>
-        </div>
-        <div class="row-buttons">
-          <button type="button" class="row-buttons__button row-buttons__button_left" aria-label="Кнопка влево"></button>
-          <button type="button" class="row-buttons__button row-buttons__button_right" aria-label="Кнопка вправо"></button>
         </div>
       </section>
       <!--Блок Choice-Bike-->
@@ -79,6 +81,11 @@
             <li><a href="#" class="choice-bike-menu__link">Грэвел</a></li>
             <li><a href="#" class="choice-bike-menu__link">TT</a></li>
           </ul>
+          <select class="choice-bike-select" name="bike-select" id="bike-select">
+            <option value="Шоссе">Шоссе</option>
+            <option value="Грэвел">Грэвел</option>
+            <option value="ТТ">TT</option>
+          </select>
         </div>
         <div class="bike-cards">
           <figure class="bike-card">
