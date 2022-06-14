@@ -8,10 +8,7 @@
   box-sizing: border-box;
 
   @media screen and (max-width: 320px) {
-    padding: 20px 18px;
+    padding-top: 20px;
 
-    /*&:not(:first-child) {
-      display: none;
-    }*/
   }
 }
