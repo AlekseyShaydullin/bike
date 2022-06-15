@@ -468,6 +468,7 @@ template {
   line-height: 18px;
   color: #151515;
   cursor: url(.../../../images/icons/icon-cursor.svg), auto;
+  opacity: 1;
   -webkit-transition: opacity .1s linear;
   transition: opacity .1s linear;
 }
@@ -994,6 +995,7 @@ template {
   gap: 20px;
   position: absolute;
   bottom: 0;
+  z-index: 30;
 }
 
 .row-buttons__button {
@@ -1005,7 +1007,6 @@ template {
   background-color: #EBEBEB;
   background-repeat: no-repeat;
   background-position: center center;
-  cursor: url(.../../../images/icons/icon-cursor.svg), auto;
   -webkit-transition: opacity .1s linear;
   transition: opacity .1s linear;
 }
@@ -1015,6 +1016,7 @@ template {
 }
 
 .row-buttons__button:hover {
+  cursor: url(.../../../images/icons/icon-cursor.svg), auto;
   opacity: .6;
 }
 
@@ -1094,6 +1096,7 @@ template {
     height: 4px;
     background-color: #CACACA;
     border-radius: 100%;
+    cursor: url(.../../../images/icons/icon-cursor.svg), auto;
   }
   .choice-bike__dot_active {
     background-color: #151515;
@@ -1173,6 +1176,7 @@ template {
   font-size: 18px;
   line-height: 28px;
   color: #151515;
+  opacity: 1;
   -webkit-transition: opacity .1s linear;
   transition: opacity .1s linear;
 }
@@ -1227,6 +1231,7 @@ template {
     font-size: 11px;
     line-height: 14px;
     color: #151515;
+    cursor: url(.../../../images/icons/icon-cursor.svg), auto;
   }
   .choice-bike-select_dark {
     color: #FFFFFF;

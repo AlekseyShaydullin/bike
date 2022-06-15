@@ -33,6 +33,7 @@
       height: 4px;
       background-color: $color-dot;
       border-radius: 100%;
+      cursor: url(.../../../images/icons/icon-cursor.svg), auto;
 
       &_active {
         background-color: $color-ft;
