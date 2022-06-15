@@ -12,5 +12,13 @@
     border-radius: 2px;
     @include font(normal, 600, 11px, 14px);
     color: $color-ft;
+
+    &_dark {
+      color: $color-ft-n;
+
+      &:focus {
+        background-color: $color-back-n;
+      }
+    }
   }
 }

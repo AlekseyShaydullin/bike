@@ -1060,6 +1060,10 @@ template {
           flex-direction: column;
 }
 
+.choice-bike__dots {
+  display: none;
+}
+
 @media screen and (max-width: 320px) {
   .choice-bike {
     padding: 40px 18px;
@@ -1223,6 +1227,12 @@ template {
     font-size: 11px;
     line-height: 14px;
     color: #151515;
+  }
+  .choice-bike-select_dark {
+    color: #FFFFFF;
+  }
+  .choice-bike-select_dark:focus {
+    background-color: #333333;
   }
 }
 
@@ -1487,6 +1497,10 @@ template {
 .footer {
   padding: 80px 120px 60px;
   background-color: #EFEFEF;
+}
+
+.footer_dark {
+  background-color: #2F2F2F;
 }
 
 .footer__title {

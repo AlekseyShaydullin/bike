@@ -4,6 +4,10 @@
   display: flex;
   flex-direction: column;
 
+  &__dots {
+    display: none;
+  }
+
   @media screen and (max-width: 320px) {
     padding: 40px 18px;
 

@@ -17,9 +17,11 @@ const rowButtonList = document.querySelectorAll('.row-buttons__button');
 const arrowLeft = document.querySelector('.row-buttons__button_left');
 const arrowRight = document.querySelector('.row-buttons__button_right');
 const bikeMenuList = document.querySelectorAll('.choice-bike-menu__link');
+const bikeSelect = document.querySelector('.choice-bike-select')
 const bikeMenuActiv = document.querySelector('.choice-bike-menu__link_activ');
 const workoutSubtitle = document.querySelector('.workout__subtitle');
 const workoutLinkList = document.querySelectorAll('.workout-links__link');
+const footer = document.querySelector('.footer');
 const footerInput = document.querySelector('.footer__input');
 const footerCopyright = document.querySelector('.footer__copyright');
 
@@ -63,8 +65,10 @@ function darkTheme() {
     arrowRight.classList.toggle('row-buttons__button_right-dark');
     bikeMenuList.forEach(bikeMenu => bikeMenu.classList.toggle('choice-bike-menu__link_dark'));
     bikeMenuActiv.classList.toggle('choice-bike-menu__link_activ-dark');
+    bikeSelect.classList.toggle('choice-bike-select_dark');
     workoutSubtitle.classList.toggle('workout__subtitle_dark');
     workoutLinkList.forEach(workoutLink => workoutLink.classList.toggle('workout-links__link_dark'));
+    footer.classList.toggle('footer_dark');
     footerInput.classList.toggle('footer__input_dark');
     footerCopyright.classList.toggle('footer__copyright_dark');
     modalBurger.classList.toggle('modal-burger_dark');
