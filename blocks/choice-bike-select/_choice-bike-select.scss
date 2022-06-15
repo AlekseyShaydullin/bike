@@ -18,6 +18,8 @@
 
       &:focus {
         background-color: $color-back-n;
+        outline: none;
+        border: 1px solid $color-brd-select;
       }
     }
   }
