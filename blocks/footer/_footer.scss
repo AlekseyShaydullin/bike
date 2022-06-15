@@ -2,6 +2,10 @@
   padding: 80px 120px 60px;
   background-color: $color-back-f;
 
+  &_dark {
+    background-color: $color-back-f-n;
+  }
+
   &__title {
     margin: 0;
     width: 229px;
