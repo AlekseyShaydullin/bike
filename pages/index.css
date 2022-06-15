@@ -1051,6 +1051,13 @@ template {
   padding: 60px 120px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 @media screen and (max-width: 320px) {
@@ -1067,6 +1074,25 @@ template {
         -ms-grid-row-align: center;
         align-self: center;
     border: 1px solid #D7D4D4;
+  }
+  .choice-bike__dots {
+    margin-top: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 5px;
+  }
+  .choice-bike__dot {
+    width: 4px;
+    height: 4px;
+    background-color: #CACACA;
+    border-radius: 100%;
+  }
+  .choice-bike__dot_active {
+    background-color: #151515;
   }
 }
 
@@ -1207,16 +1233,28 @@ template {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  /*justify-content: space-between;*/
   gap: 30px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
 
+@media screen and (max-width: 1280px) {
+  .bike-cards {
+    gap: 15px;
+  }
+}
+
 @media screen and (max-width: 320px) {
   .bike-cards {
-    padding-top: 20px;
+    height: 306px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: 20px;
+    padding-top: 0;
+    padding-bottom: 0;
   }
 }
 
@@ -1224,66 +1262,88 @@ template {
   margin: 0;
   max-width: 380px;
   width: 100%;
-  height: 380px;
-  -webkit-box-shadow: 0 20px 140px 0px rgba(0, 0, 0, 0.06);
-          box-shadow: 0 20px 140px 0px rgba(0, 0, 0, 0.06);
-  border-radius: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 22px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
 
 .bike-card__link {
+  padding: 20px;
+  -webkit-box-shadow: 0 20px 140px 0px rgba(0, 0, 0, 0.06);
+          box-shadow: 0 20px 140px 0px rgba(0, 0, 0, 0.06);
+  border-radius: 20px;
   cursor: url(.../../../images/icons/icon-cursor.svg), auto;
 }
 
 .bike-card__photo {
   display: block;
-  margin: 20px 20px;
   max-width: 340px;
   width: 100%;
-  height: 340px;
 }
 
 .bike-card__caption {
-  padding-top: 20px;
   font-style: normal;
   font-weight: 600;
   font-size: 18px;
   line-height: 22px;
 }
 
+@media screen and (max-width: 1280px) {
+  .bike-card {
+    max-width: 320px;
+    width: 100%;
+  }
+  .bike-card__photo {
+    max-width: 290px;
+    width: 100%;
+  }
+}
+
 @media screen and (max-width: 320px) {
   .bike-card {
     max-width: 284px;
     width: 100%;
-    height: 306px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    position: absolute;
+    opacity: 0;
+  }
+  .bike-card_activ {
+    opacity: 1;
+  }
+  .bike-card__link {
+    padding: 15px 15px 37px 15px;
   }
   .bike-card__photo {
     margin: 0;
     max-width: 254px;
     width: 100%;
-    height: 254px;
   }
   .bike-card__caption {
-    padding-top: 3px;
-    padding-bottom: 16px;
     font-style: normal;
     font-weight: 600;
     font-size: 14px;
     line-height: 18px;
+    position: absolute;
+    bottom: 16px;
+    left: 50%;
+    text-align: center;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
   }
 }
 

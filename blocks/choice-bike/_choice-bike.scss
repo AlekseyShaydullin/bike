@@ -1,6 +1,8 @@
 .choice-bike {
   padding: 60px 120px;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
 
   @media screen and (max-width: 320px) {
     padding: 40px 18px;
@@ -13,6 +15,24 @@
       display: inline-block;
       align-self: center;
       border: 1px solid $color-brd;
+    }
+
+    &__dots {
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      gap: 5px;
+    }
+
+    &__dot {
+      width: 4px;
+      height: 4px;
+      background-color: $color-dot;
+      border-radius: 100%;
+
+      &_active {
+        background-color: $color-ft;
+      }
     }
   }
 }
