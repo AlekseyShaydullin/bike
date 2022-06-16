@@ -49,6 +49,16 @@
     height: 20px;
   }
 
+  @media screen and (max-width: 1110px) {
+    display: none;
+
+    &_active {
+      display: flex;
+      gap: 24px;
+      padding-bottom: 100px;
+    }
+  }
+
   @media screen and (max-width: 320px) {
     display: none;
 

@@ -45,6 +45,14 @@
     }
   }
 
+  @media screen and (max-width: 1110px) {
+    display: none;
+
+    &__link {
+      @include font(normal, 600, 11px, 14px);
+    }
+  }
+
   @media screen and (max-width: 320px) {
     display: none;
 

@@ -17,14 +17,14 @@
     background-color: $color-back-n;
   }
 
-  @media screen and (max-width: 320px) {
-    max-width: 320px;
+  @media screen and (max-width: 1110px) {
+    max-width: 1110px;
     width: 100%;
     height: 74px;
 
     &__burger {
-      width: 30px;
-      height: 27px;
+      width: 37px;
+      height: 32px;
       margin-right: 18px;
       padding: 0;
       display: block;
@@ -37,10 +37,16 @@
     }
 
     &__burger_activ {
-      width: 32px;
-      height: 33px;
+      width: 40px;
+      height: 39px;
       background: url(.../../../images/icons/icon-burger-close.svg) no-repeat center;
       background-size: contain;
     }
+  }
+
+  @media screen and (max-width: 320px) {
+    max-width: 320px;
+    width: 100%;
+    height: 74px;
   }
 }

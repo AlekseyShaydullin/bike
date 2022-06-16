@@ -8,13 +8,22 @@
     letter-spacing: -.5px;
   }
 
+  @media screen and (max-width: 1110px) {
+    max-width: 550px;
+    width: 100%;
+    flex-direction: column;
+
+    &__title {
+      @include font(normal, 700, 34px, 42px);
+    }
+  }
+
   @media screen and (max-width: 320px) {
     flex-direction: column;
 
     &__title {
       @include font(normal, 700, 32px, 40px);
     }
-
   }
 
 }

@@ -35,6 +35,36 @@
     }
   }
 
+  @media screen and (max-width: 1110px) {
+    padding-top: 0;
+    display: block;
+    position: absolute;
+    top: 120px;
+    z-index: 1;
+
+    &__wrapper {
+
+      &:last-child {
+        display: none;
+      }
+    }
+
+    &__photo {
+      max-width: 550px;
+      width: 100%;
+      box-sizing: border-box;
+      display: block;
+    }
+
+    &__icon {
+      width: 75px;
+      height: 33px;
+      background-size: 100%;
+
+      z-index: 3;
+    }
+  }
+
   @media screen and (max-width: 320px) {
     padding-top: 0;
     display: block;
