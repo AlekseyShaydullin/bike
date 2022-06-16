@@ -98,7 +98,7 @@
     align-items: center;
 
     &__title {
-      max-width: 550px;
+      max-width: 286px;
       width: 100%;
     }
 
@@ -109,7 +109,7 @@
     }
 
     &__wrapper {
-      max-width: 550px;
+      max-width: 286px;
       width: 100%;
       align-items: center;
       padding-top: 90px;
@@ -129,7 +129,7 @@
     }
   }
 
-  @media screen and (max-width: 320px) {
+  @media screen and (max-width: 870px) {
     padding: 60px 18px 25px;
 
     &__form {

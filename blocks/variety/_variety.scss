@@ -68,7 +68,7 @@
     }
   }
 
-  @media screen and (max-width: 320px) {
+  @media screen and (max-width: 870px) {
     height: 505px;
     padding: 40px 18px;
 
@@ -78,10 +78,6 @@
         content: '';
         margin-bottom: 40px;
         width: 284px;
-        height: 0;
-        display: inline-block;
-        align-self: center;
-        border: 1px solid $color-brd;
       }
     }
 
@@ -93,8 +89,7 @@
       max-width: 284px;
       padding-top: 0;
       @include font(normal, 400, 12px, 18px);
-      position: absolute;
-      top: 375px;
+      top: 355px;
     }
   }
 }

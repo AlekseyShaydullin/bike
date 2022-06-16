@@ -176,7 +176,8 @@
       height: 210px;
       position: absolute;
       top: 311px;
-      left: 200px;
+      right: 520px;
+      transition: linear .1s;
     }
 
     &__photo-preview {
@@ -185,10 +186,8 @@
     }
   }
 
-  @media screen and (max-width: 320px) {
-    padding: 0 18px;
+  @media screen and (max-width: 870px) {
     height: 746px;
-    flex-direction: column;
 
     &__title {
       max-width: 284px;
@@ -234,7 +233,7 @@
       height: 160px;
       position: absolute;
       top: 311px;
-      left: 18px;
+      right: 335px;
     }
 
     &__photo-preview {

@@ -38,18 +38,13 @@
     }
   }
 
-  @media screen and (max-width: 320px) {
+  @media screen and (max-width: 870px) {
     padding: 40px 18px 40px;
-    flex-direction: column;
 
     &::before {
       content: '';
       margin-bottom: 20px;
       width: 284px;
-      height: 0;
-      display: inline-block;
-      align-self: center;
-      border: 1px solid $color-brd;
     }
 
     &__photo {
