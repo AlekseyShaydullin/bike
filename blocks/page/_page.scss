@@ -2,7 +2,6 @@
   max-width: 1440px;
   width: 100%;
   margin: auto;
-  background-color: $color-back;
   font-family: Inter, sans-serif;
   color: $color-ft;
   -webkit-text-size-adjust: 100%;
@@ -13,7 +12,6 @@
   text-rendering: optimizeLegibility;
 
   &_dark {
-    background-color: $color-back-n;
     color: $color-ft-n;
   }
 }

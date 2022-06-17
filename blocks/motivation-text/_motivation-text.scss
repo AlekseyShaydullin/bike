@@ -16,8 +16,23 @@
     }
   }
 
-  @media screen and (max-width: 320px) {
-    max-width: 284;
+  @media screen and (max-width: 1250px) {
+    padding-left: 40px;
+
+    &__quote {
+      @include font(normal, 600, 25px, 31px);
+    }
+  }
+
+  @media screen and (max-width: 1110px) {
+    max-width: 550px;
+    width: 100%;
+    padding-top: 20px;
+    padding-left: 0;
+  }
+
+  @media screen and (max-width: 870px) {
+    max-width: 284px;
     width: 100%;
     padding-left: 0;
 

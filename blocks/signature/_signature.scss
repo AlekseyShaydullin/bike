@@ -16,6 +16,26 @@
     }
   }
 
+  @media screen and (max-width: 1250px) {
+    &__quote-author {
+      @include font(normal, 500, 17px, 27px);
+    }
+
+    &__quote-author-subline {
+      @include font(normal, 400, 12px, 18px);
+    }
+  }
+
+  @media screen and (max-width: 1110px) {
+    &__quote-author {
+      padding-top: 40px;
+    }
+
+    &__quote-author-subline {
+      padding-top: 8px;
+    }
+  }
+
   @media screen and (max-width: 320px) {
     &__quote-author {
       padding-top: 40px;

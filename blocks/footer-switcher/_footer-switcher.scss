@@ -49,7 +49,17 @@
     height: 20px;
   }
 
-  @media screen and (max-width: 320px) {
+  @media screen and (max-width: 1110px) {
+    display: none;
+
+    &_active {
+      display: flex;
+      gap: 24px;
+      padding-bottom: 100px;
+    }
+  }
+
+  @media screen and (max-width: 870px) {
     display: none;
 
     &_active {

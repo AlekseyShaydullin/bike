@@ -1,0 +1,7 @@
+.body {
+  background-color: $color-back;
+
+  &_dark {
+    background-color: $color-back-n;
+  }
+}

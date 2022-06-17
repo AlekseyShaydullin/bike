@@ -8,6 +8,7 @@ const navigationChoiceBike = document.querySelector('#navigation-choice-bike');
 const navigationWorkout = document.querySelector('#navigation-workout');
 const switcherList = document.querySelectorAll('.footer-switcher__light');
 const page = document.querySelector('.page');
+const body = document.querySelector('.body');
 const header = document.querySelector('.header');
 const navLinkList = document.querySelectorAll('.navigation__link');
 const leadSubtitle = document.querySelector('.lead__subtitle');
@@ -54,6 +55,7 @@ navigationVariety.addEventListener('click', (evt) => openCloseMenu());
 function darkTheme() {
   switcherList.forEach(switcher => switcher.addEventListener('click', function (evt) {
     switcher.classList.toggle('footer-switcher__light_dark');
+    body.classList.toggle('body_dark')
     page.classList.toggle('page_dark');
     header.classList.toggle('header_dark');
     navLinkList.forEach(navLink => navLink.classList.toggle('navigation__link_dark'));

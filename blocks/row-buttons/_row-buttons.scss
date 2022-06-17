@@ -43,15 +43,32 @@
     }
   }
 
-  @media screen and (max-width: 320px) {
+  @media screen and (max-width: 1110px) {
+    margin: 0;
+    gap: 15px;
+    position: relative;
+    padding-top: 380px;
+
+    &__button {
+      width: 35px;
+      height: 35px;
+      background-size: 50% 50%;
+    }
+  }
+
+  @media screen and (max-width: 870px) {
     margin: 0;
     gap: 10px;
-    position: relative;
+    padding-top: 200px;
 
     &__button {
       width: 24px;
       height: 24px;
       background-size: 50% 50%;
     }
+  }
+
+  @media screen and (max-width: 320px) {
+    padding-top: 0;
   }
 }
