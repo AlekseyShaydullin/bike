@@ -67,4 +67,8 @@
       background-size: 50% 50%;
     }
   }
+
+  @media screen and (max-width: 320px) {
+    padding-top: 0;
+  }
 }

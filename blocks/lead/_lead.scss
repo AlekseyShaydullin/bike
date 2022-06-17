@@ -202,7 +202,6 @@
       height: 348px;
       padding-top: 40px;
       padding-left: 30px;
-      position: relative;
     }
 
     &__subtitle {
@@ -231,14 +230,30 @@
     &__wrapper-photo {
       width: 234px;
       height: 160px;
-      position: absolute;
-      top: 311px;
       right: 335px;
     }
 
     &__photo-preview {
       width: 181px;
       height: 139px;
+    }
+  }
+
+  @media screen and (max-width: 620px) {
+    &__wrapper-photo {
+      right: 200px;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    &__wrapper-photo {
+      right: 140px;
+    }
+  }
+
+  @media screen and (max-width: 410px) {
+    &__wrapper-photo {
+      left: 18px;
     }
   }
 }
