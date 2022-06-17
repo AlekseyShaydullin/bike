@@ -25,6 +25,9 @@ const workoutLinkList = document.querySelectorAll('.workout-links__link');
 const footer = document.querySelector('.footer');
 const footerInput = document.querySelector('.footer__input');
 const footerCopyright = document.querySelector('.footer__copyright');
+const form = document.querySelector('.footer__form');
+const input = document.querySelector('.footer__input');
+const inputButton = document.querySelector('.footer__input-button');
 
 //Бургер меню
 
@@ -45,9 +48,7 @@ burgerMenu();
 
 //Закрытие Бургер меню
 navigationVariety.addEventListener('click', (evt) => openCloseMenu());
-
 moadalNovigation.addEventListener('click', (evt) => openCloseMenu());
-
 navigationVariety.addEventListener('click', (evt) => openCloseMenu());
 
 //Темная тема сайта 
@@ -72,10 +73,35 @@ function darkTheme() {
     workoutLinkList.forEach(workoutLink => workoutLink.classList.toggle('workout-links__link_dark'));
     footer.classList.toggle('footer_dark');
     footerInput.classList.toggle('footer__input_dark');
+    inputButton.classList.toggle('footer__input-button_dark');
     footerCopyright.classList.toggle('footer__copyright_dark');
     modalBurger.classList.toggle('modal-burger_dark');
   }));
 }
 
-
 darkTheme();
+
+//Форма подписки на рассылку
+
+input.onfocus = () => {
+  inputButton.classList.add('footer__input-button_active');
+  input.placeholder = '';
+}
+input.onblur = () => {
+  inputButton.classList.remove('footer__input-button_active');
+  input.placeholder = 'Ваш e-mail';
+}
+
+form.onsubmit = (evt) => {
+  evt.preventDefault();
+  input.value = 'Круто!';
+  input.setAttribute('disabled', 'disabled');
+  input.style.cursor = 'auto';
+  inputButton.classList.remove('footer__input-button_active');
+}
+
+inputButton.onmousedown = (evt) => {
+  if (document.activeElement === input) {
+    evt.preventDefault();
+  }
+}

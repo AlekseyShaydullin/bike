@@ -2078,11 +2078,6 @@ template {
   cursor: url(.../../../images/icons/icon-cursor.svg), auto;
 }
 
-.footer__input_dark {
-  color: #FFFFFF;
-  opacity: .5;
-}
-
 .footer__input:focus {
   outline: none;
   border-color: #c7c7c7;
@@ -2112,6 +2107,45 @@ template {
   transition: color .2s;
 }
 
+.footer__input_dark {
+  border: 1px solid rgba(125, 125, 125, 0.5);
+  color: #FFFFFF;
+  opacity: .7;
+}
+
+.footer__input_dark:hover::-webkit-input-placeholder {
+  color: #FFFFFF;
+  opacity: 1;
+  -webkit-transition: color .2s;
+  transition: color .2s;
+}
+
+.footer__input_dark:hover:-ms-input-placeholder {
+  color: #FFFFFF;
+  opacity: 1;
+  -webkit-transition: color .2s;
+  transition: color .2s;
+}
+
+.footer__input_dark:hover::-ms-input-placeholder {
+  color: #FFFFFF;
+  opacity: 1;
+  -webkit-transition: color .2s;
+  transition: color .2s;
+}
+
+.footer__input_dark:hover::placeholder {
+  color: #FFFFFF;
+  opacity: 1;
+  -webkit-transition: color .2s;
+  transition: color .2s;
+}
+
+.footer__input_dark:focus {
+  outline: none;
+  border-color: #7D7D7D;
+}
+
 .footer__input-button {
   display: none;
   padding: 0;
@@ -2122,16 +2156,20 @@ template {
   font-size: 13px;
   line-height: 28px;
   position: absolute;
-  top: 11px;
-  right: 22px;
+  top: 60px;
+  right: 11px;
   z-index: 3;
+}
+
+.footer__input-button_dark {
+  color: #FFFFFF;
 }
 
 .footer__input-button:hover {
   cursor: url(.../../../images/icons/icon-cursor.svg), auto;
 }
 
-.footer__input-button__input-button_active {
+.footer__input-button_active {
   display: block;
 }
 
@@ -2183,7 +2221,7 @@ template {
             align-items: center;
   }
   .footer__title {
-    max-width: 286px;
+    max-width: 550px;
     width: 100%;
   }
   .footer__form {
@@ -2191,8 +2229,12 @@ template {
     width: 100%;
     padding-top: 40px;
   }
+  .footer__input-button {
+    top: 50px;
+    right: 201px;
+  }
   .footer__wrapper {
-    max-width: 286px;
+    max-width: 550px;
     width: 100%;
     -webkit-box-align: center;
         -ms-flex-align: center;
@@ -2219,12 +2261,21 @@ template {
   .footer {
     padding: 60px 18px 25px;
   }
+  .footer__title {
+    max-width: 284px;
+    width: 100%;
+  }
   .footer__form {
     padding-top: 40px;
     max-width: 284px;
     width: 100%;
   }
+  .footer__input-button {
+    right: 11px;
+  }
   .footer__wrapper {
+    max-width: 284px;
+    width: 100%;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
