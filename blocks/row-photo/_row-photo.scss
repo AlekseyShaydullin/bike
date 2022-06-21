@@ -1,16 +1,15 @@
 .row-photo {
-  padding-top: 80px;
+  padding-top: 320px;
   padding-bottom: 160px;
   display: flex;
-  gap: 40px;
-  position: relative;
+  gap: 100px;
+  //position: relative;
+  overflow: hidden;
   z-index: 1;
 
-  &__photo {
-    max-width: 650px;
-    width: 100%;
-    box-sizing: border-box;
-    display: block;
+  &__slide-icon {
+    position: relative;
+    margin-left: -100px;
   }
 
   &__icon {
@@ -19,20 +18,28 @@
     background-repeat: no-repeat;
     background-position: center center;
     position: absolute;
-    bottom: 176px;
+    transition: all ease 1s;
+    left: 0;
+    bottom: 16px;
     z-index: 3;
+  }
 
-    &_sharp-turn {
-      background-image: url(.../../../images/icons/icon-sharp-turn.svg);
-    }
+  &__slide-photo {
+    max-width: 650px;
+    width: 100%;
+    height: 400px;
+    position: relative;
+    display: flex;
+    gap: 40px;
+  }
 
-    &_off-road {
-      background-image: url(.../../../images/icons/icon-off-road.svg);
-    }
-
-    &_rough-road {
-      background-image: url(.../../../images/icons/icon-smooth-road.svg);
-    }
+  &__photo {
+    max-width: 650px;
+    width: 100%;
+    box-sizing: border-box;
+    display: block;
+    transition: all ease 1s;
+    z-index: 1;
   }
 
   @media screen and (max-width: 1110px) {
