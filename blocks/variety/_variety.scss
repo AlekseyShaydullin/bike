@@ -17,9 +17,12 @@
     letter-spacing: -.5px;
     position: absolute;
     top: 55px;
+    transform: translateY(100%);
+    transition: opacity .3s, transform .7s;
     opacity: 0;
 
     &_active {
+      transform: translateY(0);
       opacity: 1;
     }
   }
@@ -32,9 +35,12 @@
     margin: 0;
     @include font(normal, 400, 18px, 28px);
     color: $color-fst;
+    transform: translateY(100%);
+    transition: opacity .3s, transform .9s;
     opacity: 0;
 
     &_active {
+      transform: translateY(0);
       opacity: .7;
     }
 
