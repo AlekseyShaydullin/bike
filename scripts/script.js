@@ -121,19 +121,18 @@ inputButton.onmousedown = (evt) => {
 
 //Слайдер Variety
 
-/*function getWidth() {
-  let width = document.querySelector('.row-photo__photo').offsetWidth + 40;
+function getWidth() {
+  let width = document.querySelector('.row-photo__photo').offsetWidth;
   return width;
 }
 
 let activeIconIndex = 0;
 
 function init() {
-  let counter = 0;
-  slideList.forEach(slide => {
-    slide.style.left = counter * getWidth() + 'px';
-    counter++;
-  })
+  slideList.forEach(photo => {
+    photo.style.width = getWidth() + 'px';
+    photo.style.height = 'auto';
+  });
   slideIconList[activeIconIndex].style.left = 100 + 'px';
 }
 
@@ -142,68 +141,49 @@ document.querySelector('.row-photo__photo').onload = () => {
   init();
 }
 
-arrowLeft.addEventListener('click', nextPhoto);
-arrowRight.addEventListener('click', nextPhoto);
+let count = 0;
 
-function nextPhoto() {
-  if (this.classList.contains('row-buttons__button_right')) {
-    next();
-  } else if (this.classList.contains('row-buttons__button_left')) {
-    prev();
-  }
+arrowLeft.addEventListener('click', trafficLeft)
+arrowRight.addEventListener('click', trafficRight)
+
+function trafficLeft() {
+  slideIcon('trafficLeft')
+  let slideListSecond = document.querySelectorAll('.row-photo__photo');
+  let slideBoxSecond = document.querySelector('.row-photo__slide-photo');
+
+  /*slideListSecond.forEach(item => {
+    item.style.left = item.offsetLeft - (getWidth() + 40) + 'px)';
+  });*/
+
+  let photo = slideListSecond[0].cloneNode(true);
+  //photo.style.left = (slideListSecond.length - 1) * (getWidth() + 40) + 'px)';
+  slideBoxSecond.append(photo);
+  slideListSecond[0].remove();
 }
 
-function next() {
-  arrowLeft.removeEventListener('click', nextPhoto);
-  arrowRight.removeEventListener('click', nextPhoto);
-  slideIcon('next');
+function trafficRight() {
+  slideIcon('trafficRight')
+  let slideListSecond = document.querySelectorAll('.row-photo__photo');
+  let slideBoxSecond = document.querySelector('.row-photo__slide-photo');
 
-  slideList.forEach(slide => {
-    slide.style.left = slide.offsetLeft - getWidth() + 'px';
-  });
+  /*slideListSecond.forEach(item => {
+    item.style.transform = 'translate(-' + count * (getWidth() + 40) + 'px)';
+  });*/
 
-  setTimeout(() => {
-    let photo = slideList[0].cloneNode(true);
-
-    photo.style.left = (slideCounter - 1) * getWidth() + 'px';
-    slideBox.append(photo);
-    slideList[0].remove();
-
-    arrowLeft.addEventListener('click', nextPhoto);
-    arrowRight.addEventListener('click', nextPhoto);
-  }, 1000)
+  let photo = slideListSecond[slideListSecond.length - 1].cloneNode(true);
+  /*photo.style.transform = 'translate(-' + count * (getWidth() + 40) + 'px)';*/
+  slideBoxSecond.insertBefore(photo, slideListSecond[0]);
+  slideListSecond[slideListSecond.length - 1].remove();
 }
 
-function prev() {
-  arrowLeft.removeEventListener('click', nextPhoto);
-  arrowRight.removeEventListener('click', nextPhoto);
-  slideIcon('prev');
-
-  let photo = slideList[slideCounter - 1].cloneNode(true);
-
-  photo.style.left = -getWidth() + 'px';
-  slideBox.insertBefore(photo, slideList[0]);
-  slideList[slideCounter - 1].remove();
-  const slideList = document.querySelectorAll('.row-photo__photo');
-
-  slideList.forEach(slide => {
-    slide.style.left = slide.offsetLeft + getWidth() + 'px';
-  });
-
-  setTimeout(() => {
-    arrowLeft.addEventListener('click', nextPhoto);
-    arrowRight.addEventListener('click', nextPhoto);
-  }, 1000);
-}
-
-function slideIcon(direction) {
+function slideIcon(traffic) {
   slideIconList[activeIconIndex].style.left = -100 + 'px';
-  if (direction === 'next') {
+  if (traffic === 'trafficLeft') {
     activeIconIndex++;
     if (activeIconIndex === iconCounter) {
       activeIconIndex = 0;
     }
-  } else if (direction === 'prev') {
+  } else if (traffic === 'trafficRight') {
     activeIconIndex--;
     if (activeIconIndex < 0) {
       activeIconIndex = iconCounter - 1;
@@ -211,133 +191,5 @@ function slideIcon(direction) {
   }
   setTimeout(() => {
     slideIconList[activeIconIndex].style.left = 100 + 'px';
-  }, 500);
-}*/
-
-//--------------------------------
-
-/*let slide = [];
-
-for (let i = 0; i < slideList.length; i++) {
-  slide[i] = slideList[i].src;
-  console.log(slide[i])
-  slideList[i].remove();
-  console.log(slide[i])
-}*/
-
-/*let stepPhoto = 0;
-let offsetPhoto = 0;
-
-function drawPhoto() {
-  let img = document.createElement('img');
-  img.src = slideList[stepPhoto].src;
-  img.classList.add('row-photo__photo');
-  img.style.left = offsetPhoto * 690 + 'px';
-  document.querySelector('#slide-photo').appendChild(img);
-  if (stepPhoto + 1 == slideList.length) {
-    stepPhoto = 0;
-  } else {
-    stepPhoto++;
-  }
-  offsetPhoto = 1;
-}
-//console.log(drawPhoto());
-
-arrowLeft.addEventListener('click', (evt) => {
-  document.onclick = null;
-  let slideVisibleList = document.querySelectorAll('.row-photo__photo');
-  //console.log(slideVisibleList)
-  let offsetPhotoVisible = 0;
-  for (let i = 0; i < slideVisibleList.length; i++) {
-    slideVisibleList[i].style.left = offsetPhotoVisible * 690 - 690 + 'px';
-    offsetPhotoVisible++;
-  }
-  setTimeout(function () {
-    slideVisibleList[0].remove();
-    drawPhoto();
-  });
-});
-
-/*arrowRight.addEventListener('click', (evt) => {
-  document.onclick = null;
-  let slideVisibleList = document.querySelectorAll('.row-photo__photo');
-  let offsetPhotoVisible = 0;
-  for (let i = 0; i < slideVisibleList.length; i++) {
-    slideVisibleList[i].style.right = offsetPhotoVisible * 690 - 690 + 'px';
-    offsetPhotoVisible++;
-  }
-  setTimeout(function () {
-    slideVisibleList[0].remove();
-    drawPhoto();
-  }, 1000);
-});*/
-
-
-/*drawPhoto(); drawPhoto();
-
-let slideIcon = [];
-
-for (let i = 0; i < slideIconList.length; i++) {
-  slideIcon[i] = slideIconList[i].src;
-  slideIconList[i].remove();
-}
-
-let stepIcon = 0;
-let offsetIcon = 0;
-
-function drawIcon() {
-  let img = document.createElement('img');
-  img.src = slideIconList[stepIcon].src;
-  img.classList.add('row-photo__icon');
-  img.style.left = offsetIcon * 650 + 'px';
-  document.querySelector('#slide-icon').appendChild(img);
-}
-
-drawIcon()*/
-
-let count = 0;
-let width;
-let slideArr = Object.values(slideList);
-let slideBoxArr = Object.values(slideBox);
-
-console.log(slideArr);
-console.log(slideBoxArr);
-
-function init() {
-  width = document.querySelector('.row-photo__photo').offsetWidth;
-  slideBox.style.width = width * slideArr.length + 'px';
-  slideArr.forEach(photo => {
-    photo.style.width = width + 'px';
-    photo.style.height = 'auto';
-  });
-  rollSlider()
-}
-
-window.addEventListener('resize', init);
-init();
-
-
-
-arrowLeft.addEventListener('click', () => {
-  count++;
-  if (count > 1) {
-    let slide1 = slideArr.splice(0, 1);
-    slideBoxArr.push(slide1[0]);
-    console.log(slideArr);
-  }
-  rollSlider();
-});
-
-arrowRight.addEventListener('click', () => {
-  count--;
-  if (count < 0) {
-    count = slideList.length - 1;
-  }
-  rollSlider()
-});
-
-function rollSlider() {
-  slideArr.forEach(photo => {
-    photo.style.transform = 'translate(-' + count * (width + 40) + 'px)';
-  })
+  }, 500)
 }

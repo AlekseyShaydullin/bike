@@ -1205,7 +1205,7 @@ template {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  /*gap: 40px;*/
+  gap: 100px;
   position: relative;
   overflow: hidden;
   z-index: 1;
@@ -1213,6 +1213,7 @@ template {
 
 .row-photo__slide-icon {
   position: relative;
+  margin-left: -100px;
 }
 
 .row-photo__icon {
@@ -1223,6 +1224,7 @@ template {
   position: absolute;
   -webkit-transition: all ease 1s;
   transition: all ease 1s;
+  left: 0;
   bottom: 16px;
   z-index: 3;
 }
