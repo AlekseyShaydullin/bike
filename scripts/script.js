@@ -15,7 +15,6 @@ const header = document.querySelector('.header');
 const navLinkList = document.querySelectorAll('.navigation__link');
 const leadSubtitle = document.querySelector('.lead__subtitle');
 const autorSubline = document.querySelector('.signature__quote-author-subline');
-const varietySubtitle = document.querySelector('.variety__subtitle'); //повтор
 const rowButtonList = document.querySelectorAll('.row-buttons__button');
 //Темная тема (стрелки слайдера Variety)
 const arrowLeft = document.querySelector('.row-buttons__button_left');
@@ -38,9 +37,10 @@ const slideList = document.querySelectorAll('.row-photo__photo');
 const slideCounter = slideList.length;
 const slideIconList = document.querySelectorAll('.row-photo__icon');
 const iconCounter = slideIconList.length;
-const slideTitle = document.querySelector('.variety__title');
-const slideSubtitle = document.querySelector('.variety__subtitle');
-
+const slideTitleList = document.querySelectorAll('.variety__title');
+const slideSubtitleList = document.querySelectorAll('.variety__subtitle');
+let activeIconIndex = 0;
+let activeTextIndex = 0;
 
 //Бургер меню
 
@@ -75,7 +75,7 @@ function darkTheme() {
     navLinkList.forEach(navLink => navLink.classList.toggle('navigation__link_dark'));
     leadSubtitle.classList.toggle('lead__subtitle_dark');
     autorSubline.classList.toggle('signature__quote-author-subline_dark');
-    varietySubtitle.classList.toggle('variety__subtitle_dark');
+    slideSubtitleList.classList.toggle('variety__subtitle_dark');
     rowButtonList.forEach(rowButton => rowButton.classList.toggle('row-buttons__button_dark'));
     arrowLeft.classList.toggle('row-buttons__button_left-dark');
     arrowRight.classList.toggle('row-buttons__button_right-dark');
@@ -121,12 +121,12 @@ inputButton.onmousedown = (evt) => {
 
 //Слайдер Variety
 
+//Работа с картинками
+
 function getWidth() {
-  let width = document.querySelector('.row-photo__photo').offsetWidth;
+  let width = document.querySelector('.row-photo__photo').offsetWidth + 40;
   return width;
 }
-
-let activeIconIndex = 0;
 
 function init() {
   slideList.forEach(photo => {
@@ -141,37 +141,32 @@ document.querySelector('.row-photo__photo').onload = () => {
   init();
 }
 
-let count = 0;
-
-arrowLeft.addEventListener('click', trafficLeft)
-arrowRight.addEventListener('click', trafficRight)
+arrowLeft.addEventListener('click', trafficLeft);
+arrowRight.addEventListener('click', trafficRight);
 
 function trafficLeft() {
-  slideIcon('trafficLeft')
+  slideIcon('trafficLeft');
+  slideText('trafficLeft');
   let slideListSecond = document.querySelectorAll('.row-photo__photo');
   let slideBoxSecond = document.querySelector('.row-photo__slide-photo');
 
-  /*slideListSecond.forEach(item => {
-    item.style.left = item.offsetLeft - (getWidth() + 40) + 'px)';
-  });*/
+  slideListSecond.forEach(photo => {
+    photo.style.left = photo.offsetLeft - getWidth() + 'px';
+  });
 
   let photo = slideListSecond[0].cloneNode(true);
-  //photo.style.left = (slideListSecond.length - 1) * (getWidth() + 40) + 'px)';
+  photo.style.left = (slideListSecond.length - 1) * getWidth() + 'px)';
   slideBoxSecond.append(photo);
   slideListSecond[0].remove();
 }
 
 function trafficRight() {
-  slideIcon('trafficRight')
+  slideIcon('trafficRight');
+  slideText('trafficRight');
   let slideListSecond = document.querySelectorAll('.row-photo__photo');
   let slideBoxSecond = document.querySelector('.row-photo__slide-photo');
 
-  /*slideListSecond.forEach(item => {
-    item.style.transform = 'translate(-' + count * (getWidth() + 40) + 'px)';
-  });*/
-
   let photo = slideListSecond[slideListSecond.length - 1].cloneNode(true);
-  /*photo.style.transform = 'translate(-' + count * (getWidth() + 40) + 'px)';*/
   slideBoxSecond.insertBefore(photo, slideListSecond[0]);
   slideListSecond[slideListSecond.length - 1].remove();
 }
@@ -192,4 +187,33 @@ function slideIcon(traffic) {
   setTimeout(() => {
     slideIconList[activeIconIndex].style.left = 100 + 'px';
   }, 500)
+}
+
+//Работа с текстовым блоком
+
+function deleteClassActive() {
+  slideTitleList.forEach(title => {
+    title.classList.remove('variety__title_active');
+  });
+
+  slideSubtitleList.forEach(subtitle => {
+    subtitle.classList.remove('variety__subtitle_active');
+  });
+}
+
+function slideText(traffic) {
+  deleteClassActive();
+  if (traffic === 'trafficLeft') {
+    activeTextIndex++;
+    if (activeTextIndex === iconCounter) {
+      activeTextIndex = 0;
+    }
+  } else if (traffic === 'trafficRight') {
+    activeTextIndex--;
+    if (activeTextIndex < 0) {
+      activeTextIndex = iconCounter - 1;
+    }
+  }
+  slideTitleList[activeTextIndex].classList.add('variety__title_active');
+  slideSubtitleList[activeTextIndex].classList.add('variety__subtitle_active');
 }

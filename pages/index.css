@@ -1072,19 +1072,30 @@ template {
   font-size: 55px;
   line-height: 60px;
   letter-spacing: -.5px;
+  position: absolute;
+  top: 55px;
+  opacity: 0;
+}
+
+.variety__title_active {
+  opacity: 1;
 }
 
 .variety__subtitle {
   max-width: 460px;
   width: 100%;
-  position: relative;
+  position: absolute;
+  top: 160px;
   margin: 0;
-  padding-top: 50px;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
   line-height: 28px;
   color: #222222;
+  opacity: 0;
+}
+
+.variety__subtitle_active {
   opacity: .7;
 }
 
@@ -1200,13 +1211,12 @@ template {
 }
 
 .row-photo {
-  padding-top: 80px;
+  padding-top: 320px;
   padding-bottom: 160px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   gap: 100px;
-  position: relative;
   overflow: hidden;
   z-index: 1;
 }

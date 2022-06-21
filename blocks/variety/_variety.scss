@@ -15,17 +15,28 @@
     margin: 0;
     @include font(normal, 700, 55px, 60px);
     letter-spacing: -.5px;
+    position: absolute;
+    top: 55px;
+    opacity: 0;
+
+    &_active {
+      opacity: 1;
+    }
   }
 
   &__subtitle {
     max-width: 460px;
     width: 100%;
-    position: relative;
+    position: absolute;
+    top: 160px;
     margin: 0;
-    padding-top: 50px;
     @include font(normal, 400, 18px, 28px);
     color: $color-fst;
-    opacity: .7;
+    opacity: 0;
+
+    &_active {
+      opacity: .7;
+    }
 
     &_dark {
       color: $color-as-n;
