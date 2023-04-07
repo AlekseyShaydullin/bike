@@ -13,15 +13,15 @@
   transition: opacity .3s ease-out;
   z-index: 115;
 
-  &_dark {
-    background-color: $color-back-n;
-    color: $color-ft-n;
-  }
-
   &_activ {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     opacity: 1;
+  }
+
+  &_dark {
+    background-color: $color-back-n;
+    color: $color-ft-n;
   }
 }

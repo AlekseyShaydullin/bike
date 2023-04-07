@@ -64,7 +64,7 @@ navigationVariety.addEventListener('click', (evt) => openCloseMenu());
 moadalNovigation.addEventListener('click', (evt) => openCloseMenu());
 navigationVariety.addEventListener('click', (evt) => openCloseMenu());
 
-//Темная тема сайта 
+//Темная тема сайта
 
 function darkTheme() {
   switcherList.forEach(switcher => switcher.addEventListener('click', function (evt) {
@@ -75,7 +75,7 @@ function darkTheme() {
     navLinkList.forEach(navLink => navLink.classList.toggle('navigation__link_dark'));
     leadSubtitle.classList.toggle('lead__subtitle_dark');
     autorSubline.classList.toggle('signature__quote-author-subline_dark');
-    slideSubtitleList.classList.toggle('variety__subtitle_dark');
+    slideSubtitleList.forEach(slideSubtitle => slideSubtitle.classList.toggle('variety__subtitle_dark'))
     rowButtonList.forEach(rowButton => rowButton.classList.toggle('row-buttons__button_dark'));
     arrowLeft.classList.toggle('row-buttons__button_left-dark');
     arrowRight.classList.toggle('row-buttons__button_right-dark');
