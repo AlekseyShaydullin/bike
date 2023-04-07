@@ -1,6 +1,7 @@
 //DOM
 //Бургер меню
 const burger = document.querySelector('.header__burger');
+const burgerButton = document.querySelector('.header__burger_activ')
 const modalBurger = document.querySelector('.modal-burger');
 const moadalNovigation = document.querySelector('#modal-navigation');
 const modalSwitcher = document.querySelector('#modal-switcher')
@@ -69,7 +70,7 @@ navigationVariety.addEventListener('click', (evt) => openCloseMenu());
 function darkTheme() {
   switcherList.forEach(switcher => switcher.addEventListener('click', function (evt) {
     switcher.classList.toggle('footer-switcher__light_dark');
-    body.classList.toggle('body_dark')
+    body.classList.toggle('body_dark');
     page.classList.toggle('page_dark');
     header.classList.toggle('header_dark');
     navLinkList.forEach(navLink => navLink.classList.toggle('navigation__link_dark'));
@@ -124,7 +125,7 @@ inputButton.onmousedown = (evt) => {
 //Работа с картинками
 
 function getWidth() {
-  let width = document.querySelector('.row-photo__photo').offsetWidth + 40;
+  let width = document.querySelector('.row-photo__photo').offsetWidth; //  + 40
   return width;
 }
 

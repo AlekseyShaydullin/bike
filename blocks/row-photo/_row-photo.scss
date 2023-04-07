@@ -1,11 +1,9 @@
 .row-photo {
-  padding-top: 320px;
+  padding-top: 302px;
   padding-bottom: 160px;
   display: flex;
   gap: 100px;
-  //position: relative;
   overflow: hidden;
-  z-index: 1;
 
   &__slide-icon {
     position: relative;
@@ -50,10 +48,15 @@
     z-index: 1;
 
     &__wrapper {
-
       &:last-child {
         display: none;
       }
+    }
+
+    &__slide-photo {
+      max-width: 850px;
+      left: 150px;
+      gap: 150px;
     }
 
     &__photo {
@@ -63,11 +66,17 @@
       display: block;
     }
 
+    &__slide-icon {
+      margin-left: 50px;
+    }
+
     &__icon {
       width: 75px;
       height: 33px;
       background-size: 100%;
       z-index: 3;
+      bottom: -402px;
+      left: -150px;
     }
   }
 
