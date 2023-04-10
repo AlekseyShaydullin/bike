@@ -371,6 +371,7 @@ template {
   margin: auto;
   font-family: Inter, sans-serif;
   color: #151515;
+  background-color: #F4F4F4;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
@@ -1196,7 +1197,7 @@ template {
     margin: 0;
     gap: 15px;
     position: relative;
-    padding-top: 480px;
+    padding-top: 520px;
   }
   .row-buttons__button {
     width: 35px;
@@ -1228,6 +1229,7 @@ template {
 }
 
 .choice-bike {
+  height: 690px;
   padding: 60px 120px;
   box-sizing: border-box;
   display: flex;
@@ -1470,6 +1472,12 @@ template {
   padding-top: 120px;
   padding-bottom: 60px;
   display: flex;
+  flex-direction: column;
+  gap: 60px;
+  overflow: hidden;
+}
+.bike-cards__view {
+  display: flex;
   gap: 30px;
   box-sizing: border-box;
 }
@@ -1478,17 +1486,19 @@ template {
     max-width: 550px;
     width: 100%;
     height: 550px;
-    flex-direction: column;
     margin-top: 20px;
     padding-top: 0;
     padding-bottom: 0;
+  }
+  .bike-cards__view {
+    flex-direction: column;
   }
 }
 @media screen and (max-width: 870px) {
   .bike-cards {
     max-width: 286px;
     width: 100%;
-    height: 306px;
+    height: 360px;
     flex-direction: column;
     margin-top: 20px;
     padding-top: 0;
@@ -1508,7 +1518,7 @@ template {
 .bike-card__link {
   padding: 20px;
   background-color: #F4F4F4;
-  box-shadow: 0 20px 140px 0px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 20px 140px 0px rgba(0, 0, 0, 0.02);
   border-radius: 20px;
   cursor: url(.../../../images/icons/icon-cursor.svg), auto;
 }
@@ -1530,18 +1540,14 @@ template {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    position: absolute;
-    opacity: 0;
-  }
-  .bike-card_activ {
-    opacity: 1;
+    box-sizing: border-box;
   }
   .bike-card__link {
     padding: 15px 15px 37px 15px;
   }
   .bike-card__photo {
     margin: 0;
-    max-width: 550px;
+    max-width: 350px;
     width: 100%;
   }
   .bike-card__caption {
@@ -1549,25 +1555,13 @@ template {
     font-weight: 600;
     font-size: 20px;
     line-height: 24px;
-    position: absolute;
-    bottom: 6px;
-    left: 50%;
     text-align: center;
-    transform: translateX(-50%);
   }
 }
 @media screen and (max-width: 870px) {
   .bike-card {
     max-width: 284px;
     width: 100%;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    position: absolute;
-    opacity: 0;
-  }
-  .bike-card_activ {
-    opacity: 1;
   }
   .bike-card__link {
     padding: 15px 15px 37px 15px;
@@ -1582,11 +1576,6 @@ template {
     font-weight: 600;
     font-size: 14px;
     line-height: 18px;
-    position: absolute;
-    bottom: 16px;
-    left: 50%;
-    text-align: center;
-    transform: translateX(-50%);
   }
 }
 
