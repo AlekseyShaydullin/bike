@@ -84,9 +84,9 @@
         <div class="choice-bike-header">
           <h2 class="choice-bike-header__title">Велосипеды</h2>
           <ul class="choice-bike-menu">
-            <li><a href="#" class="choice-bike-menu__link choice-bike-menu__link_activ">Шоссе</a></li>
-            <li><a href="#" class="choice-bike-menu__link">Грэвел</a></li>
-            <li><a href="#" class="choice-bike-menu__link">TT</a></li>
+            <li><button type="button" class="choice-bike-menu__button choice-bike-menu__button_activ" aria-label="Кнопка Шоссе">Шоссе</button></li>
+            <li><button type="button" class="choice-bike-menu__button" aria-label="Кнопка Грэвел">Грэвел</button></li>
+            <li><button type="button" class="choice-bike-menu__button" aria-label="Кнопка ТТ">TT</button></li>
           </ul>
           <select class="choice-bike-select" name="bike-select" id="bike-select">
             <option value="Шоссе">Шоссе</option>
@@ -95,7 +95,7 @@
           </select>
         </div>
         <div class="bike-cards">
-          <article class="bike-cards__view" id="highway">
+          <article class="bike-cards__view bike-cards__view_activ" id="highway">
             <figure class="bike-card bike-card_activ">
               <a href="https://www.sigmasports.com/item/Cervelo/Caledonia-5-Ultegra-Disc-Road-Bike-2021/RDEN " class="bike-card__link" target="_blank">
                 <img class="bike-card__photo" src="./images/cervelo-caledonia-5.jpg" alt="Велосипед Cervelo Caledonia-5" />
@@ -157,9 +157,9 @@
           </article>
         </div>
         <div class="choice-bike__dots">
-          <div class="choice-bike__dot choice-bike__dot_active"></div>
-          <div class="choice-bike__dot"></div>
-          <div class="choice-bike__dot"></div>
+          <div class="choice-bike__dot choice-bike__dot_active" id="firstBike"></div>
+          <div class="choice-bike__dot" id="secondBike"></div>
+          <div class="choice-bike__dot" id="thirdBike"></div>
         </div>
       </section>
       <!--Блок Workout-->

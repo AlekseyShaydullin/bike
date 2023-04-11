@@ -32,13 +32,16 @@
     justify-content: flex-end;
     align-items: center;
     box-sizing: border-box;
+    opacity: 0;
+    position: absolute;
+    transform: translateY(100%);
+    transition: opacity .3s, transform .5s;
 
-    // position: absolute;
-    // opacity: 0;
-
-    // &_activ {
-    //   opacity: 1;
-    // }
+    &_activ {
+      opacity: 1;
+      position: relative;
+      transform: translateY(0);
+    }
 
     &__link {
       padding: 15px 15px 37px 15px;
