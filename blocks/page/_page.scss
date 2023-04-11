@@ -4,6 +4,7 @@
   margin: auto;
   font-family: Inter, sans-serif;
   color: $color-ft;
+  background-color: $color-back;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
@@ -13,5 +14,6 @@
 
   &_dark {
     color: $color-ft-n;
+    background-color: $color-back-n;
   }
 }

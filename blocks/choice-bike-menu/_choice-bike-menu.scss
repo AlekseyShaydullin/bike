@@ -6,8 +6,10 @@
   align-items: flex-end;
   list-style: none;
 
-  &__link {
-    text-decoration: none;
+  &__button {
+    padding: 0;
+    border: none;
+    background-color: inherit;
     @include font(normal, 400, 18px, 28px);
     opacity: .7;
     color: $color-fst;
@@ -48,7 +50,7 @@
   @media screen and (max-width: 1110px) {
     display: none;
 
-    &__link {
+    &__button {
       @include font(normal, 600, 11px, 14px);
     }
   }
@@ -56,7 +58,7 @@
   @media screen and (max-width: 320px) {
     display: none;
 
-    &__link {
+    &__button {
       @include font(normal, 600, 11px, 14px);
     }
   }
