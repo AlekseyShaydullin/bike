@@ -48,8 +48,13 @@ const slideSubtitleList = document.querySelectorAll('.variety__subtitle');
 let activeIconIndex = 0;
 let activeTextIndex = 0;
 
-//Слайдер Variety
-
+//Слайдер Bikes
+const bikeCardsHighway = document.getElementById('highway');
+const bikeCardsGravel = document.getElementById('gravel');
+const bikeCardsTT = document.getElementById('TT');
+const bikeOptionsList = document.querySelectorAll('.choice-bike-select__option')
+const bikeDotsList = document.querySelectorAll('.choice-bike__dot');
+const bikeCardList = document.querySelectorAll('.bike-card');
 
 //============================= Бургер меню ==================================
 
@@ -69,6 +74,7 @@ function burgerMenu() {
 burgerMenu();
 
 //Закрытие Бургер меню
+
 navigationVariety.addEventListener('click', (evt) => openCloseMenu());
 moadalNovigation.addEventListener('click', (evt) => openCloseMenu());
 navigationVariety.addEventListener('click', (evt) => openCloseMenu());
@@ -109,6 +115,7 @@ input.onfocus = () => {
   inputButton.classList.add('footer__input-button_active');
   input.placeholder = '';
 }
+
 input.onblur = () => {
   inputButton.classList.remove('footer__input-button_active');
   input.placeholder = 'Ваш e-mail';
@@ -229,12 +236,7 @@ function slideText(traffic) {
 
 //============================= Слайдер Bikes ==================================
 
-const bikeCardsHighway = document.getElementById('highway');
-const bikeCardsGravel = document.getElementById('gravel');
-const bikeCardsTT = document.getElementById('TT');
-const bikeOptionsList = document.querySelectorAll('.choice-bike-select__option')
-const bikeDotsList = document.querySelectorAll('.choice-bike__dot');
-const bikeCardList = document.querySelectorAll('.bike-card');
+
 
 bikeMenuButtonList.forEach(btn => btn.addEventListener('click', (e) => choiceBikeType(e)));
 

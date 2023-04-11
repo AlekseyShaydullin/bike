@@ -55,26 +55,13 @@
 
     &__caption {
       @include font(normal, 600, 20px, 24px);
-      // position: absolute;
-      // bottom: 6px;
-      // left: 50%;
       text-align: center;
-      // transform: translateX(-50%);
     }
   }
 
   @media screen and (max-width: 870px) {
     max-width: 284px;
     width: 100%;
-    // display: flex;
-    // justify-content: flex-end;
-    // align-items: center;
-    // position: absolute;
-    // opacity: 0;
-
-    // &_activ {
-    //   opacity: 1;
-    // }
 
     &__link {
       padding: 15px 15px 37px 15px;
@@ -88,11 +75,6 @@
 
     &__caption {
       @include font(normal, 600, 14px, 18px);
-      // position: absolute;
-      // bottom: 16px;
-      // left: 50%;
-      // text-align: center;
-      // transform: translateX(-50%);
     }
   }
 }
