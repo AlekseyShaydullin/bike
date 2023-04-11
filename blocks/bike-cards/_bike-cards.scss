@@ -1,0 +1,55 @@
+.bike-cards {
+  margin: 0;
+  padding-top: 120px;
+  padding-bottom: 60px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  gap: 60px;
+  overflow: hidden;
+
+  &__view {
+    display: flex;
+    gap: 30px;
+    box-sizing: border-box;
+    opacity: 0;
+    position: absolute;
+    transform: translateY(100%);
+    transition: opacity .3s, transform .5s;
+
+    &_activ {
+      opacity: 1;
+      position: relative;
+      transform: translateY(0);
+    }
+  }
+
+  @media screen and (max-width: 1110px) {
+    max-width: 550px;
+    width: 100%;
+    height: 550px;
+    margin-top: 20px;
+    padding-top: 0;
+    padding-bottom: 0;
+
+    &__view {
+      flex-direction: column;
+      transform: translateX(100%);
+      transition: opacity .5s, transform .8s;
+
+      &_activ {
+        transform: translateX(0);
+      }
+    }
+  }
+  
+  @media screen and (max-width: 870px) {
+    max-width: 286px;
+    width: 100%;
+    height: 360px;
+    flex-direction: column;
+    margin-top: 20px;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}

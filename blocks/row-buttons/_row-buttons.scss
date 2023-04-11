@@ -1,0 +1,79 @@
+.row-buttons {
+  margin: 50px auto 60px 0;
+  display: flex;
+  gap: 20px;
+  position: absolute;
+  bottom: 0;
+  z-index: 30;
+
+  &__button {
+    width: 50px;
+    height: 50px;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    background-color: $color-greybtn;
+    background-repeat: no-repeat;
+    background-position: center center;
+    transition: opacity .1s linear;
+
+    &_dark {
+      background-color: $color-greenbtn-n;
+    }
+
+    &:hover {
+      cursor: url(.../../../images/icons/icon-cursor.svg), auto;
+      opacity: .6;
+    }
+
+    &_left {
+      background-image: url(.../../../images/icons/arrow-left.svg);
+    }
+
+    &_right {
+      background-image: url(.../../../images/icons/arrow-right.svg);
+    }
+
+    &_left-dark {
+      background-image: url(.../../../images/icons/arrow-left-black.svg);
+    }
+
+    &_right-dark {
+      background-image: url(.../../../images/icons/arrow-right-black.svg);
+    }
+  }
+
+  @media screen and (max-width: 1110px) {
+    margin: 0;
+    gap: 15px;
+    position: relative;
+    padding-top: 520px;
+
+    &__button {
+      width: 35px;
+      height: 35px;
+      background-size: 50% 50%;
+    }
+  }
+
+  @media screen and (max-width: 870px) {
+    margin: 0;
+    gap: 10px;
+    padding-top: 0;
+    position: absolute;
+    top: 83px;
+    left: 240px;
+    display: block;
+    height: 24px;
+
+    &__button {
+      width: 24px;
+      height: 24px;
+      background-size: 50% 50%;
+    }
+  }
+
+  @media screen and (max-width: 320px) {
+    padding-top: 0;
+  }
+}

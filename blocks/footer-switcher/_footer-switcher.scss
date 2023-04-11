@@ -1,0 +1,71 @@
+.footer-switcher {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+
+  &__sun {
+    width: 28px;
+    height: 28px;
+  }
+
+  &__light {
+    display: inline-block;
+    width: 44px;
+    height: 24px;
+    border-radius: 12px;
+    background: $color-ft-n;
+    z-index: 0;
+    margin: 0;
+    padding: 0;
+    border: none;
+    position: relative;
+    transition-duration: 300ms;
+    cursor: url(.../../../images/icons/icon-cursor.svg), auto;
+
+    &::after {
+      content: "";
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: $color-greenbtn;
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      z-index: 1;
+      transition-duration: 300ms;
+    }
+
+    &_dark {
+      background: $color-swback-n;
+
+      &::after {
+        left: 22px;
+      }
+    }
+  }
+
+  &__moon {
+    width: 20px;
+    height: 20px;
+  }
+
+  @media screen and (max-width: 1110px) {
+    display: none;
+
+    &_active {
+      display: flex;
+      gap: 24px;
+      padding-bottom: 100px;
+    }
+  }
+
+  @media screen and (max-width: 870px) {
+    display: none;
+
+    &_active {
+      display: flex;
+      gap: 24px;
+      padding-bottom: 30px;
+    }
+  }
+}

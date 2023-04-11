@@ -1,0 +1,30 @@
+.choice-bike-header {
+  display: flex;
+  justify-content: space-between;
+
+  &__title {
+    margin: 0;
+    @include font(normal, 700, 55px, 60px);
+    letter-spacing: -.5px;
+  }
+
+  @media screen and (max-width: 1110px) {
+    max-width: 550px;
+    width: 100%;
+    flex-direction: column;
+
+    &__title {
+      @include font(normal, 700, 34px, 42px);
+    }
+  }
+
+  @media screen and (max-width: 870px) {
+    max-width: 286px;
+    width: 100%;
+    flex-direction: column;
+
+    &__title {
+      @include font(normal, 700, 32px, 40px);
+    }
+  }
+}

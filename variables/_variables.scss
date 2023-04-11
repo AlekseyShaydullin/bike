@@ -1,0 +1,45 @@
+//шрифты - миксины:
+@mixin font($fst, $fwe, $fsi, $lhe) {
+  font-style: $fst;
+  font-weight: $fwe;
+  font-size: $fsi;
+  line-height: $lhe;
+}
+
+//цвет background:
+$color-back: #F4F4F4;
+$color-back-n: #333333;
+$color-back-f: #EFEFEF;
+$color-back-f-n: #2F2F2F;
+
+//цвет шрифтов:
+$color-ft: #151515;
+$color-ft-n: #FFFFFF;
+$color-fst: #222222;
+$color-fst-n: #E6E6E6;
+$color-as-n: #E5E5E5;
+$color-ffc: #CFCFCF;
+$color-ffc-n: #565656;
+$color-dot: #CACACA;
+
+//цвет бордера:
+$color-brd: #D7D4D4;
+$color-brd-select: #7D7D7D;
+
+//цвет shadow:
+$color-shadow: rgba(0, 0, 0, .14);
+
+//цвет кнопок:
+$color-greenbtn: #24B47E;
+$color-greenbtn-n: #434343;
+$color-greenbtn-hv: #319E75;
+$color-greybtn: #EBEBEB;
+$color-swback-n: #545454;
+
+//цвета формы:
+$color-font-input: rgba(34, 34, 34, 1);
+$color-font-input-hvr: rgba(21, 21, 21, 1);
+$color-brd-input: rgba(199, 199, 199, .5);
+$color-brd-input-focus: rgba(199, 199, 199, 1);
+$color-font-input-hvr-n: rgba(125, 125, 125, .5);
+$color-brd-input-focus-n: #7D7D7D;

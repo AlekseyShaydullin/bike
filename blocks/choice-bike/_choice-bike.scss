@@ -1,0 +1,75 @@
+.choice-bike {
+  height: 690px;
+  padding: 60px 120px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+
+  &__dots {
+    display: none;
+  }
+
+  @media screen and (max-width: 1110px) {
+    padding: 40px 18px 0;
+    justify-content: center;
+    align-items: center;
+
+    &::before {
+      content: '';
+      margin-bottom: 40px;
+      width: 550px;
+      height: 0;
+      display: inline-block;
+      align-self: center;
+      border-top: 1px solid $color-brd;
+    }
+
+    &__dots {
+      margin-top: 40px;
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    &__dot {
+      width: 6px;
+      height: 6px;
+      background-color: $color-dot;
+      border-radius: 100%;
+      cursor: url(.../../../images/icons/icon-cursor.svg), auto;
+
+      &_active {
+        background-color: $color-ft;
+      }
+    }
+  }
+
+  @media screen and (max-width: 870px) {
+    padding: 40px 18px;
+
+    &::before {
+      content: '';
+      margin-bottom: 40px;
+      width: 284px;
+    }
+
+    &__dots {
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      gap: 5px;
+    }
+
+    &__dot {
+      width: 4px;
+      height: 4px;
+      background-color: $color-dot;
+      border-radius: 100%;
+      cursor: url(.../../../images/icons/icon-cursor.svg), auto;
+
+      &_active {
+        background-color: $color-ft;
+      }
+    }
+  }
+}
