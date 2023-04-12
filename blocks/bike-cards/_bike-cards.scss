@@ -34,6 +34,7 @@
 
     &__view {
       flex-direction: column;
+      gap: 60px;
       transform: translateX(100%);
       transition: opacity .5s, transform .8s;
 

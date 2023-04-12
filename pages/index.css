@@ -1230,7 +1230,7 @@ template {
 }
 
 .choice-bike {
-  height: 690px;
+  height: 740px;
   padding: 60px 120px;
   box-sizing: border-box;
   display: flex;
@@ -1369,24 +1369,11 @@ template {
   font-weight: 600;
   font-size: 18px;
   line-height: 28px;
-  color: #151515;
   opacity: 1;
   transition: opacity 0.1s linear;
 }
 .choice-bike-menu__button_activ:hover {
   opacity: 0.75;
-}
-.choice-bike-menu__button_activ-dark {
-  font-style: normal;
-  font-weight: 600;
-  font-size: 18px;
-  line-height: 28px;
-  color: #FFFFFF;
-  opacity: 1;
-  transition: opacity 0.1s linear;
-}
-.choice-bike-menu__button_activ-dark:hover {
-  opacity: 0.65;
 }
 @media screen and (max-width: 1110px) {
   .choice-bike-menu {
@@ -1505,6 +1492,7 @@ template {
   }
   .bike-cards__view {
     flex-direction: column;
+    gap: 60px;
     transform: translateX(100%);
     transition: opacity 0.5s, transform 0.8s;
   }

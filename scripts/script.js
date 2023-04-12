@@ -95,7 +95,6 @@ function darkTheme() {
     arrowLeft.classList.toggle('row-buttons__button_left-dark');
     arrowRight.classList.toggle('row-buttons__button_right-dark');
     bikeMenuButtonList.forEach(bikeMenu => bikeMenu.classList.toggle('choice-bike-menu__button_dark'));
-    bikeMenuActiv.classList.toggle('choice-bike-menu__button_activ-dark');
     bikeSelect.classList.toggle('choice-bike-select_dark');
     workoutSubtitle.classList.toggle('workout__subtitle_dark');
     workoutLinkList.forEach(workoutLink => workoutLink.classList.toggle('workout-links__link_dark'));
@@ -251,7 +250,7 @@ function choiceBikeType(e) {
   } else if(bikeMenuButtonList[2] === e.target) {
     bikeCardsTT.classList.toggle('bike-cards__view_activ');
   }
-  e.target.classList.toggle('choice-bike-menu__button_activ');
+  e.target.classList.toggle('choice-bike-menu__button_activ'); // 
 }
 
 function selectBikeType() {
